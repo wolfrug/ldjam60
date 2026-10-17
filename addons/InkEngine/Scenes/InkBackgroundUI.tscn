@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://1we70hiin1om"]
+
+[ext_resource type="Script" uid="uid://cq5pivhi4g2sx" path="res://addons/InkEngine/Scripts/InkBackground.cs" id="1_dkdr1"]
+
+[node name="InkBackgroundUI" type="TextureRect" unique_id=1411227171]
+mouse_filter = 2
+script = ExtResource("1_dkdr1")

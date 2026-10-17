@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InkButtonData" format=3 uid="uid://c7rnnbpm2lc4e"]
+
+[ext_resource type="Script" uid="uid://bfi0he0lwydqd" path="res://addons/InkEngine/Scripts/DataTypes/InkButtonData.cs" id="1_g5a12"]
+
+[resource]
+script = ExtResource("1_g5a12")
+_nodePath = "res://addons/InkEngine/Scenes/InkButton.tscn"
+_ID = "Default"
+metadata/_custom_type_script = "uid://bfi0he0lwydqd"

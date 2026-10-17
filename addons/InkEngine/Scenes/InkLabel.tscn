@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cetuxojo4pi3o"]
+
+[ext_resource type="Script" uid="uid://coh24nstjnosq" path="res://addons/InkEngine/Scripts/InkLabel.cs" id="1_52ylb"]
+[ext_resource type="StyleBox" uid="uid://cx04ltbfvlvxs" path="res://addons/InkEngine/UI/dialog_label_box.tres" id="2_yt5di"]
+[ext_resource type="Theme" uid="uid://dp7p64i6xy7hr" path="res://addons/InkEngine/UI/dialogbox_theme.tres" id="3_ima1l"]
+
+[sub_resource type="Theme" id="Theme_8f1fl"]
+
+[node name="InkLabel" type="BoxContainer" unique_id=648605235 node_paths=PackedStringArray("textLabel", "container")]
+offset_right = 125.0
+offset_bottom = 46.0
+size_flags_horizontal = 3
+vertical = true
+script = ExtResource("1_52ylb")
+textLabel = NodePath("Panel/MarginContainer/RichTextLabel")
+container = NodePath("Panel")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1889959205]
+z_as_relative = false
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_8f1fl")
+theme_override_styles/panel = ExtResource("2_yt5di")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=837264908]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/MarginContainer" unique_id=691433562]
+layout_mode = 2
+theme = ExtResource("3_ima1l")
+bbcode_enabled = true
+text = "Hello, I wonder if [b]bold can't[/b] even works. And [i]italics can't[/i]. And [b][i]bold italics can't[/i][/b]. Wow. Can't."
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1

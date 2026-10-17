@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://yx25qia305a0"]
+
+[ext_resource type="Script" uid="uid://dmnimr8wl2uwh" path="res://scripts/InkSpeechBubble.cs" id="1_vu3sg"]
+[ext_resource type="StyleBox" uid="uid://cr5tw1cxkmbr6" path="res://addons/InkEngine/UI/default_invisible_label_box.tres" id="2_o8uh3"]
+[ext_resource type="Theme" uid="uid://dp7p64i6xy7hr" path="res://addons/InkEngine/UI/dialogbox_theme.tres" id="3_4bn81"]
+[ext_resource type="Script" uid="uid://5kgd1ij5172p" path="res://scripts/SpeechBubble.cs" id="4_o8uh3"]
+
+[sub_resource type="Theme" id="Theme_8f1fl"]
+
+[node name="InkLabel" type="BoxContainer" unique_id=648605235 node_paths=PackedStringArray("speechBubble", "textLabel", "container")]
+offset_right = 125.0
+offset_bottom = 46.0
+size_flags_horizontal = 3
+vertical = true
+script = ExtResource("1_vu3sg")
+speechBubble = NodePath("Panel/SpeechBubble")
+textLabel = NodePath("Panel/MarginContainer/RichTextLabel")
+container = NodePath("Panel")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1889959205]
+z_as_relative = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_8f1fl")
+theme_override_styles/panel = ExtResource("2_o8uh3")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=837264908]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/MarginContainer" unique_id=691433562]
+clip_contents = false
+layout_mode = 2
+theme = ExtResource("3_4bn81")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Hello"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpeechBubble" type="Control" parent="Panel" unique_id=10881260]
+show_behind_parent = true
+layout_mode = 2
+script = ExtResource("4_o8uh3")
+GlobalTarget = Vector2(-58, -68)
+Draggable = false
+Roundness = 1.0
+Squareness = 2.0

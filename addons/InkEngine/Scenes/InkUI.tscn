@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cvs7dcu5noyax"]
+
+[ext_resource type="Script" uid="uid://dbqrww8msjaf1" path="res://addons/InkEngine/Scripts/InkUI.cs" id="1_il76n"]
+
+[node name="InkUI" type="CanvasLayer" unique_id=1355346341]
+script = ExtResource("1_il76n")

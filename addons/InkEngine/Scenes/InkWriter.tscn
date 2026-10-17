@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://pvn88xjsfue3"]
+
+[ext_resource type="Script" uid="uid://c760b1oo0gp1m" path="res://addons/InkEngine/Scripts/Inkwriter.cs" id="1_tw3jv"]
+[ext_resource type="Theme" uid="uid://dp7p64i6xy7hr" path="res://addons/InkEngine/UI/dialogbox_theme.tres" id="1_umhqq"]
+[ext_resource type="Script" uid="uid://qju08u1chs41" path="res://addons/InkEngine/Scripts/InkScrollContainer.cs" id="2_6b8iu"]
+[ext_resource type="Script" uid="uid://4585437b8bv1" path="res://addons/GodotInk/Src/InkStory.cs" id="2_yr2o3"]
+[ext_resource type="PackedScene" uid="uid://1we70hiin1om" path="res://addons/InkEngine/Scenes/InkBackgroundUI.tscn" id="5_dh1ed"]
+[ext_resource type="PackedScene" uid="uid://cx1wvq3fyad0h" path="res://addons/InkEngine/Scenes/InkPortrait.tscn" id="6_togga"]
+
+[sub_resource type="Resource" id="Resource_togga"]
+script = ExtResource("2_yr2o3")
+metadata/_custom_type_script = "uid://4585437b8bv1"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rtbp5"]
+
+[node name="InkEngine" type="CanvasLayer" unique_id=412805178 node_paths=PackedStringArray("storyTextContainer", "mainPanel")]
+script = ExtResource("1_tw3jv")
+story = SubResource("Resource_togga")
+storyTextContainer = NodePath("Panel/MarginContainer/ScrollContainer/InkWriterVBox")
+mainPanel = NodePath("Panel")
+continueMaximally = false
+continueInput = "ink_continue"
+
+[node name="Panel" type="Panel" parent="." unique_id=2146954083]
+anchors_preset = -1
+anchor_left = 0.70000005
+anchor_top = 0.009000001
+anchor_right = 0.994
+anchor_bottom = 0.97900003
+offset_left = 0.3519287
+offset_top = 0.27999973
+offset_right = 0.52001953
+offset_bottom = -0.32006836
+theme = ExtResource("1_umhqq")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=407430642]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.024
+anchor_bottom = 1.0
+offset_right = -0.19158936
+offset_bottom = -192.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_right = 25
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer" unique_id=1165308149]
+layout_mode = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+script = ExtResource("2_6b8iu")
+
+[node name="InkWriterVBox" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer" unique_id=1057545831]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1811033083]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.071
+anchor_bottom = 1.0
+offset_left = -295.35205
+offset_top = -9.0
+offset_right = -35.442055
+offset_bottom = -3.0
+mouse_filter = 2
+alignment = 1
+
+[node name="PortraitContainer" type="BoxContainer" parent="Panel/VBoxContainer" unique_id=1329970533]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="InkPortrait" parent="Panel/VBoxContainer/PortraitContainer" unique_id=2129696352 instance=ExtResource("6_togga")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+
+[node name="InkBackgroundContainer" type="PanelContainer" parent="." unique_id=1272348965]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="InkBackground" parent="InkBackgroundContainer" unique_id=1948816966 instance=ExtResource("5_dh1ed")]
+z_index = -1
+material = SubResource("ShaderMaterial_rtbp5")
+layout_mode = 2
+expand_mode = 3

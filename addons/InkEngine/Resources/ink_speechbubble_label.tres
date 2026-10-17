@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InkLabelData" format=3 uid="uid://dp40j15524mnp"]
+
+[ext_resource type="Script" uid="uid://dsvrof0qs8u6n" path="res://addons/InkEngine/Scripts/DataTypes/InkLabelData.cs" id="1_6lfge"]
+
+[resource]
+script = ExtResource("1_6lfge")
+_nodePath = "res://addons/InkEngine/Scenes/InkSpeechBubbleLabel.tscn"
+_ID = "SpeechBubble_Talk"
+metadata/_custom_type_script = "uid://dsvrof0qs8u6n"

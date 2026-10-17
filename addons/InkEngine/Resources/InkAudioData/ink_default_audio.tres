@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="InkAudioData" format=3 uid="uid://dh1bjygr75bu2"]
+
+[ext_resource type="AudioStream" uid="uid://cc78m4kep2ddf" path="res://addons/InkEngine/Audio/UI_Click.wav" id="1_k82gt"]
+[ext_resource type="Script" uid="uid://c8qw77pfnjo57" path="res://addons/InkEngine/Scripts/DataTypes/InkAudioData.cs" id="1_lli14"]
+[ext_resource type="AudioStream" uid="uid://b1eg8kesr1wa7" path="res://addons/InkEngine/Audio/UI_Hoveron.wav" id="2_gkakn"]
+[ext_resource type="AudioStream" uid="uid://c66sor8fmxlsd" path="res://addons/InkEngine/Audio/UI_Continue.wav" id="3_gkakn"]
+[ext_resource type="AudioStream" uid="uid://1klo0vx7j4ui" path="res://addons/InkEngine/Audio/WillowGuardMusic.mp3" id="4_f4h6o"]
+[ext_resource type="AudioStream" uid="uid://e52hmb8ip1kl" path="res://addons/InkEngine/Audio/WillowGuardAmbience.mp3" id="5_fduog"]
+
+[resource]
+script = ExtResource("1_lli14")
+audioStreams = Dictionary[String, AudioStream]({
+"AmbienceWind": ExtResource("5_fduog"),
+"ButtonClick": ExtResource("1_k82gt"),
+"ButtonHover": ExtResource("2_gkakn"),
+"InkContinue": ExtResource("3_gkakn"),
+"MusicCalm": ExtResource("4_f4h6o")
+})
+_ID = "Default"
+metadata/_custom_type_script = "uid://c8qw77pfnjo57"

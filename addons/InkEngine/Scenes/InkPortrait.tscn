@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cx1wvq3fyad0h"]
+
+[ext_resource type="Script" uid="uid://ddmjfhiofkjde" path="res://addons/InkEngine/Scripts/InkPortrait.cs" id="1_mgugs"]
+[ext_resource type="Theme" uid="uid://dp7p64i6xy7hr" path="res://addons/InkEngine/UI/dialogbox_theme.tres" id="1_ux5qj"]
+[ext_resource type="Theme" uid="uid://bwcic61yqp7ch" path="res://addons/InkEngine/UI/optionbox_theme.tres" id="6_jvco2"]
+
+[node name="InkPortrait" type="TextureRect" unique_id=2129696352 node_paths=PackedStringArray("nameText")]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(150, 150)
+mouse_filter = 2
+theme = ExtResource("1_ux5qj")
+expand_mode = 5
+script = ExtResource("1_mgugs")
+nameText = NodePath("TextLabel")
+
+[node name="TextLabel" type="RichTextLabel" parent="." unique_id=720106058]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.99300003
+anchor_right = 1.0
+anchor_bottom = 1.1400001
+offset_top = 0.049987793
+offset_right = -2.0
+offset_bottom = -1.5258789e-05
+mouse_filter = 2
+theme = ExtResource("6_jvco2")
+text = "Name name name"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2109290376]
+self_modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InkLabelData" format=3 uid="uid://ch13r53bmk886"]
+
+[ext_resource type="Script" uid="uid://dsvrof0qs8u6n" path="res://addons/InkEngine/Scripts/DataTypes/InkLabelData.cs" id="1_47v5r"]
+
+[resource]
+script = ExtResource("1_47v5r")
+_ID = "Default"
+_nodePath = "res://addons/InkEngine/Scenes/InkLabel.tscn"
+metadata/_custom_type_script = "uid://dsvrof0qs8u6n"

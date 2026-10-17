@@ -1,0 +1,46 @@
+[gd_resource type="Theme" format=3 uid="uid://dp7p64i6xy7hr"]
+
+[ext_resource type="StyleBox" uid="uid://cr5tw1cxkmbr6" path="res://addons/InkEngine/UI/default_invisible_label_box.tres" id="1_v73if"]
+[ext_resource type="FontFile" uid="uid://cu4sbc3ni0bsq" path="res://fonts/komika/KOMIKAHB.ttf" id="4_80q75"]
+[ext_resource type="FontFile" uid="uid://dtbp8e7ade64s" path="res://fonts/komika/KOMIKHBI.ttf" id="5_yplx0"]
+[ext_resource type="FontFile" uid="uid://7i1rd6ldk70t" path="res://fonts/komika/KOMIKHI_.ttf" id="6_fnhvt"]
+[ext_resource type="FontFile" uid="uid://8g5p70wh2or4" path="res://fonts/komika/KOMIKAH_.ttf" id="7_yk10p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vqord"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.04, 0.04, 0.04, 0.69803923)
+shadow_size = 6
+shadow_offset = Vector2(5, 5)
+
+[resource]
+GridContainer/constants/h_separation = 15
+GridContainer/constants/v_separation = 15
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.8392157)
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("7_yk10p")
+MarginContainer/constants/margin_bottom = 30
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+Panel/styles/panel = SubResource("StyleBoxFlat_vqord")
+PanelContainer/styles/panel = ExtResource("1_v73if")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/fonts/bold_font = ExtResource("4_80q75")
+RichTextLabel/fonts/bold_italics_font = ExtResource("5_yplx0")
+RichTextLabel/fonts/italics_font = ExtResource("6_fnhvt")
+RichTextLabel/fonts/mono_font = ExtResource("7_yk10p")
+RichTextLabel/fonts/normal_font = ExtResource("7_yk10p")
+TabContainer/fonts/font = ExtResource("7_yk10p")
+VBoxContainer/constants/separation = 30

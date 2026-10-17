@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="InkBackgroundData" format=3 uid="uid://css1grlmln0ll"]
+
+[ext_resource type="Texture2D" uid="uid://bdqjsjsel208r" path="res://addons/InkEngine/Graphics/Backgrounds/background_polis_gates_day.png" id="1_bn3s7"]
+[ext_resource type="Texture2D" uid="uid://b62jdbq8yobju" path="res://addons/InkEngine/Graphics/UI/ui_button_artsy.png" id="1_nlce8"]
+[ext_resource type="Script" uid="uid://ch2xw40skh2lx" path="res://addons/InkEngine/Scripts/DataTypes/InkBackgroundData.cs" id="1_prkr0"]
+
+[resource]
+script = ExtResource("1_prkr0")
+Texture = ExtResource("1_bn3s7")
+SubTextures = Dictionary[String, Resource]({
+"icon": ExtResource("1_nlce8")
+})
+POIs = Dictionary[String, Vector2]({
+"poi_1": Vector2(1060, 865),
+"poi_2": Vector2(2957, 825)
+})
+_ID = "example_scene"
+metadata/_custom_type_script = "uid://ch2xw40skh2lx"

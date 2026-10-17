@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cqs4v4w6hnhl7"]
+
+[ext_resource type="Script" uid="uid://xbbdjjwihrfo" path="res://addons/InkEngine/Scripts/InkUINode.cs" id="1_674e8"]
+
+[node name="InkUiNode" type="Node" unique_id=595333756]
+script = ExtResource("1_674e8")

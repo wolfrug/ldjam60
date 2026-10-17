@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dnprcle6c3h5j"]
+
+[ext_resource type="Script" uid="uid://woscxh7omatw" path="res://addons/InkEngine/Scripts/InkArrayFunctions.cs" id="1_glmjy"]
+
+[node name="InkArrayFunctions" type="Node" unique_id=717008958]
+script = ExtResource("1_glmjy")

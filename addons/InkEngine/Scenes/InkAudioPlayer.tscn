@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://hbv1hij3i6si"]
+
+[ext_resource type="Script" uid="uid://c13vxucjlhnmg" path="res://addons/InkEngine/Scripts/InkAudioPlayer.cs" id="1_0kwbv"]
+[ext_resource type="Resource" uid="uid://dh1bjygr75bu2" path="res://addons/InkEngine/Resources/InkAudioData/ink_default_audio.tres" id="2_nihj1"]
+
+[node name="InkAudioPlayer" type="AudioStreamPlayer" unique_id=697520287]
+script = ExtResource("1_0kwbv")
+defaultAudioData = ExtResource("2_nihj1")

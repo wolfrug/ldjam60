@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://xxsanplx25c7"]
+
+[ext_resource type="Theme" uid="uid://dp7p64i6xy7hr" path="res://addons/InkEngine/UI/dialogbox_theme.tres" id="1_4uis8"]
+[ext_resource type="Script" uid="uid://5e4ve3v32w31" path="res://addons/InkEngine/Scripts/InkTooltip.cs" id="2_4w2dx"]
+
+[node name="InkTooltip" type="CenterContainer" unique_id=1404438232 node_paths=PackedStringArray("textLabel")]
+custom_minimum_size = Vector2(200, 50)
+offset_right = 289.0
+offset_bottom = 54.0
+theme = ExtResource("1_4uis8")
+script = ExtResource("2_4w2dx")
+textLabel = NodePath("Text")
+
+[node name="Text" type="RichTextLabel" parent="." unique_id=1135219727]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+bbcode_enabled = true
+text = "Tooltip tex tex sadsadsa"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="Text" unique_id=2109324757]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

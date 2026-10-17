@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bh1p3d71se67c"]
+
+[ext_resource type="Script" uid="uid://cj5wxap7c55hl" path="res://addons/InkEngine/Scripts/InkBackgroundSprite2D.cs" id="1_eiroq"]
+
+[node name="InkBackgroundSprite2D" type="Sprite2D" unique_id=445005963 node_paths=PackedStringArray("camera", "presetCameraLocations")]
+script = ExtResource("1_eiroq")
+camera = NodePath("Camera2D")
+presetCameraLocations = {
+"Default": NodePath(".")
+}
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1666800848]
+zoom = Vector2(0.5, 0.5)

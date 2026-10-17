@@ -1,0 +1,7 @@
+[gd_resource type="RichTextEffect" script_class="InkLiveTextExtension" format=3 uid="uid://c1rbb2wq3jeoc"]
+
+[ext_resource type="Script" uid="uid://drsu1q5ljqpsq" path="res://addons/InkEngine/Scripts/InkLiveTextExtension.cs" id="1_vo86v"]
+
+[resource]
+script = ExtResource("1_vo86v")
+metadata/_custom_type_script = "uid://drsu1q5ljqpsq"

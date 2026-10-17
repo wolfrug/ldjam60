@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cjj81slerufnw"]
+
+[ext_resource type="Script" uid="uid://ba8clavamywdy" path="res://addons/InkEngine/Scripts/InkBackgroundEditor.cs" id="1_t5mkh"]
+[ext_resource type="Resource" path="res://addons/InkEngine/Resources/InkBackgroundData/example_scene.tres" id="2_ydynt"]
+
+[node name="InkBackgroundDataEditor" type="Node2D" unique_id=1504746784]
+script = ExtResource("1_t5mkh")
+Data = ExtResource("2_ydynt")

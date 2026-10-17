@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dsebhhvwoyufn"]
+
+[ext_resource type="Script" uid="uid://ipqq1pt3tfw" path="res://addons/InkEngine/Scripts/InkInventory.cs" id="1_g3lyx"]
+[ext_resource type="PackedScene" uid="uid://cyilpdfthsfq2" path="res://addons/InkEngine/Scenes/InkInventoryButton.tscn" id="2_l3c1c"]
+[ext_resource type="PackedScene" uid="uid://cvrpspo2y5rii" path="res://addons/InkEngine/Scenes/InkButton.tscn" id="5_k33w0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t86v2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xrivr"]
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[node name="InkInventory" type="CanvasLayer" unique_id=1303753580 node_paths=PackedStringArray("parent", "mainPanel", "cancelButton")]
+script = ExtResource("1_g3lyx")
+parent = NodePath("PanelContainer/ScrollContainer/GridContainer")
+mainPanel = NodePath("PanelContainer")
+cancelButton = NodePath("PanelContainer/VBoxContainer/HBoxContainer/ExitButton")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1749254341]
+visible = false
+material = SubResource("ShaderMaterial_t86v2")
+anchors_preset = -1
+anchor_left = 0.38900003
+anchor_right = 0.591
+anchor_bottom = 1.0
+offset_left = -0.8800659
+offset_top = 289.0
+offset_right = -56.720093
+offset_bottom = -398.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xrivr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1883361303]
+layout_mode = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=701308484]
+layout_mode = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="ExitButton" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=1428391306 instance=ExtResource("5_k33w0")]
+layout_mode = 2
+text = ""
+flat = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer" unique_id=1411578441]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/ScrollContainer" unique_id=1604939057]
+layout_mode = 2
+columns = 4
+
+[node name="InkInventoryButton" parent="PanelContainer/ScrollContainer/GridContainer" unique_id=1181602401 instance=ExtResource("2_l3c1c")]
+layout_mode = 2
+icon = null
+
+[node name="InkInventoryButton6" parent="PanelContainer/ScrollContainer/GridContainer" unique_id=1696865237 instance=ExtResource("2_l3c1c")]
+layout_mode = 2
+icon = null
+
+[node name="InkInventoryButton7" parent="PanelContainer/ScrollContainer/GridContainer" unique_id=592480339 instance=ExtResource("2_l3c1c")]
+layout_mode = 2
+icon = null
+
+[node name="InkInventoryButton8" parent="PanelContainer/ScrollContainer/GridContainer" unique_id=1397042186 instance=ExtResource("2_l3c1c")]
+layout_mode = 2
+icon = null

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InkStoryData" format=3 uid="uid://ds3ume4yolpfq"]
+
+[ext_resource type="Script" uid="uid://bisfayh0oint4" path="res://addons/InkEngine/Scripts/DataTypes/InkStoryData.cs" id="1_im747"]
+[ext_resource type="Resource" uid="uid://1da0k3mb34uf" path="res://addons/InkEngine/InkFiles/main.ink" id="2_3y4yv"]
+
+[resource]
+script = ExtResource("1_im747")
+inkFile = ExtResource("2_3y4yv")
+metadata/_custom_type_script = "uid://bisfayh0oint4"

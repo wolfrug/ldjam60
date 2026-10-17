@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dg0r8p2b7dwgo"]
+
+[ext_resource type="Texture2D" uid="uid://b62jdbq8yobju" path="res://addons/InkEngine/Graphics/UI/ui_button_artsy.png" id="1_y07t4"]
+[ext_resource type="Texture2D" uid="uid://bh5l6bpsrutuu" path="res://addons/InkEngine/Graphics/UI/ui_button_artsy_selected.png" id="2_mhknw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_y07t4")
+}],
+"loop": 1,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mhknw")
+}],
+"loop": 1,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(63, 62)
+
+[node name="InkButton2d" type="AnimatedSprite2D" unique_id=1407465224]
+sprite_frames = SubResource("SpriteFrames_xrivr")
+animation = &"off"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2021003473]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=46318406]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="play" binds= ["on"]]
+[connection signal="mouse_exited" from="Area2D" to="." method="play" binds= ["off"]]

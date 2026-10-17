@@ -1,0 +1,52 @@
+[gd_resource type="Theme" format=3 uid="uid://bwcic61yqp7ch"]
+
+[ext_resource type="StyleBox" uid="uid://u3tivqq8xn0j" path="res://addons/InkEngine/UI/button_hover.tres" id="2_w0sp1"]
+[ext_resource type="StyleBox" uid="uid://c7v8e3fh6ggc4" path="res://addons/InkEngine/UI/button_normal.tres" id="3_j1bg7"]
+[ext_resource type="FontFile" uid="uid://cu4sbc3ni0bsq" path="res://fonts/komika/KOMIKAHB.ttf" id="4_nfsww"]
+[ext_resource type="FontFile" uid="uid://dtbp8e7ade64s" path="res://fonts/komika/KOMIKHBI.ttf" id="5_5inqr"]
+[ext_resource type="FontFile" uid="uid://7i1rd6ldk70t" path="res://fonts/komika/KOMIKHI_.ttf" id="6_6xysy"]
+[ext_resource type="FontFile" uid="uid://8g5p70wh2or4" path="res://fonts/komika/KOMIKAH_.ttf" id="7_rrvty"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tgegw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ov350"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fg8lu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5inqr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxmgb"]
+bg_color = Color(0.023567734, 0.19870889, 0.18152663, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 0.96862745)
+shadow_size = 4
+shadow_offset = Vector2(5.48, 4.295)
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/constants/icon_max_width = 35
+Button/font_sizes/font_size = 22
+Button/fonts/font = ExtResource("7_rrvty")
+Button/styles/disabled = SubResource("StyleBoxFlat_tgegw")
+Button/styles/disabled_mirrored = SubResource("StyleBoxFlat_ov350")
+Button/styles/focus = SubResource("StyleBoxFlat_fg8lu")
+Button/styles/hover = ExtResource("2_w0sp1")
+Button/styles/hover_pressed = ExtResource("2_w0sp1")
+Button/styles/normal = ExtResource("3_j1bg7")
+Button/styles/normal_mirrored = SubResource("StyleBoxFlat_5inqr")
+Button/styles/pressed = ExtResource("2_w0sp1")
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.8392157)
+Label/fonts/font = ExtResource("7_rrvty")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+Panel/styles/panel = SubResource("StyleBoxFlat_yxmgb")
+RichTextLabel/fonts/bold_font = ExtResource("4_nfsww")
+RichTextLabel/fonts/bold_italics_font = ExtResource("5_5inqr")
+RichTextLabel/fonts/italics_font = ExtResource("6_6xysy")
+RichTextLabel/fonts/mono_font = ExtResource("7_rrvty")
+RichTextLabel/fonts/normal_font = ExtResource("7_rrvty")

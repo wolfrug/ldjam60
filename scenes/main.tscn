@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bjqfq1g3upqwa"]
+
+[ext_resource type="PackedScene" uid="uid://pvn88xjsfue3" path="res://addons/InkEngine/Scenes/InkWriter.tscn" id="1_tbgi4"]
+[ext_resource type="Resource" uid="uid://ds3ume4yolpfq" path="res://addons/InkEngine/InkFiles/InkStoryData_Main.tres" id="2_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://hbv1hij3i6si" path="res://addons/InkEngine/Scenes/InkAudioPlayer.tscn" id="3_tefeu"]
+[ext_resource type="PackedScene" uid="uid://cvs7dcu5noyax" path="res://addons/InkEngine/Scenes/InkUI.tscn" id="8_85g3d"]
+[ext_resource type="Script" uid="uid://cppej883pf1fl" path="res://scripts/PanCameraController.cs" id="9_85g3d"]
+[ext_resource type="Script" uid="uid://cj5wxap7c55hl" path="res://addons/InkEngine/Scripts/InkBackgroundSprite2D.cs" id="10_jkv2x"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xrivr"]
+
+[node name="Control" type="Node2D" unique_id=2017707225]
+
+[node name="InkEngine" parent="." unique_id=412805178 instance=ExtResource("1_tbgi4")]
+storyData = ExtResource("2_tbgi4")
+startKnot = "init"
+
+[node name="InkAudioPlayer" parent="InkEngine" unique_id=697520287 instance=ExtResource("3_tefeu")]
+
+[node name="InkUI" parent="." unique_id=1355346341 instance=ExtResource("8_85g3d")]
+visible = false
+
+[node name="Background" type="Node2D" parent="." unique_id=1645449]
+
+[node name="BlackBackground" type="Sprite2D" parent="Background" unique_id=1013308211]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(-2220, -11)
+scale = Vector2(13121, 7252.0005)
+texture = SubResource("PlaceholderTexture2D_xrivr")
+
+[node name="PanCameraController" type="Camera2D" parent="Background" unique_id=538349284 node_paths=PackedStringArray("TargetSprite")]
+script = ExtResource("9_85g3d")
+TargetSprite = NodePath("../BackgroundSprite")
+ClampZoomToImageBounds = true
+metadata/_custom_type_script = "uid://cppej883pf1fl"
+
+[node name="BackgroundSprite" type="Sprite2D" parent="Background" unique_id=1769587166 node_paths=PackedStringArray("camera")]
+script = ExtResource("10_jkv2x")
+camera = NodePath("../PanCameraController")
+
+[connection signal="InkCameraEndPan" from="Background/BackgroundSprite" to="Background/PanCameraController" method="SetControlsOn"]
+[connection signal="InkCameraStartPan" from="Background/BackgroundSprite" to="Background/PanCameraController" method="SetControlsOff"]
