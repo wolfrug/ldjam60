@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://dsphr5o5kcu25"]
+
+[ext_resource type="Script" uid="uid://bmevkp0oxvmmy" path="res://addons/InkEngine/Scripts/Boot.cs" id="1_heg12"]
+[ext_resource type="Theme" uid="uid://bwcic61yqp7ch" path="res://addons/InkEngine/UI/optionbox_theme.tres" id="4_o4iyv"]
+[ext_resource type="AudioStream" uid="uid://1klo0vx7j4ui" path="res://addons/InkEngine/Audio/WillowGuardMusic.mp3" id="5_lix63"]
+[ext_resource type="Texture2D" uid="uid://cwxh827trv8qh" path="res://PrototypeAssets/Background_LittleSmithItchIo/1.png" id="5_yq8bu"]
+[ext_resource type="Texture2D" uid="uid://b3p8d8nsjnub1" path="res://PrototypeAssets/Background_LittleSmithItchIo/2.png" id="6_bh8sn"]
+[ext_resource type="Texture2D" uid="uid://v8hm0qg7psrj" path="res://PrototypeAssets/Background_LittleSmithItchIo/3.png" id="7_yfna8"]
+[ext_resource type="Texture2D" uid="uid://foamn73i04mv" path="res://PrototypeAssets/Background_LittleSmithItchIo/4.png" id="8_07jrm"]
+[ext_resource type="Texture2D" uid="uid://bht0cboxq5ccq" path="res://PrototypeAssets/Background_LittleSmithItchIo/5.png" id="9_tl63h"]
+[ext_resource type="Script" uid="uid://cppej883pf1fl" path="res://scripts/PanCameraController.cs" id="10_8hi5h"]
+[ext_resource type="FontFile" uid="uid://8g5p70wh2or4" path="res://fonts/komika/KOMIKAH_.ttf" id="10_bh8sn"]
+[ext_resource type="Texture2D" uid="uid://bslaxc7g3fvqv" path="res://PrototypeAssets/base_background.png" id="11_bh8sn"]
+
+[sub_resource type="Gradient" id="Gradient_bh8sn"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yfna8"]
+gradient = SubResource("Gradient_bh8sn")
+
+[node name="Boot" type="CanvasLayer" unique_id=1015788684 node_paths=PackedStringArray("_startButton", "_quitButton")]
+script = ExtResource("1_heg12")
+_startScene = "res://scenes/main.tscn"
+_startButton = NodePath("VBoxContainer/StartGame")
+_quitButton = NodePath("VBoxContainer/QuitGame")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1751839138]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_yfna8")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=2024494219]
+
+[node name="PanCameraController" type="Camera2D" parent="Node2D" unique_id=1791515600 node_paths=PackedStringArray("TargetSprite")]
+show_behind_parent = true
+position = Vector2(580, 321)
+script = ExtResource("10_8hi5h")
+TargetSprite = NodePath("../Sprite2D")
+EdgePanSpeed = Vector2(50, 50)
+EdgePanStartMarginPercent = 0.5
+PauseWhenOverUI = false
+MinZoom = 4.0
+MaxZoom = 5.0
+ClampZoomToImageBounds = true
+metadata/_custom_type_script = "uid://cppej883pf1fl"
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1689061520]
+show_behind_parent = true
+position = Vector2(580, 323.5)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("11_bh8sn")
+
+[node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=871849528]
+show_behind_parent = true
+scale = Vector2(2.5, 2.5)
+scroll_offset = Vector2(580, 321)
+repeat_size = Vector2(480, 0)
+repeat_times = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Parallax2D" unique_id=1750292223]
+show_behind_parent = true
+texture = ExtResource("5_yq8bu")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Node2D" unique_id=1615177404]
+show_behind_parent = true
+scale = Vector2(2.5, 2.5)
+scroll_scale = Vector2(0.9, 1)
+scroll_offset = Vector2(580, 321)
+repeat_size = Vector2(480, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Parallax2D2" unique_id=2122134141]
+show_behind_parent = true
+texture = ExtResource("6_bh8sn")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Node2D" unique_id=786805300]
+show_behind_parent = true
+scale = Vector2(2.5, 2.5)
+scroll_scale = Vector2(1.1, 1)
+scroll_offset = Vector2(580, 321)
+repeat_size = Vector2(480, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Parallax2D3" unique_id=1784572312]
+show_behind_parent = true
+texture = ExtResource("7_yfna8")
+
+[node name="Parallax2D4" type="Parallax2D" parent="Node2D" unique_id=1108174461]
+show_behind_parent = true
+scale = Vector2(2.5, 2.5)
+scroll_scale = Vector2(1.2, 1)
+scroll_offset = Vector2(580, 321)
+repeat_size = Vector2(480, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Parallax2D4" unique_id=1338816472]
+show_behind_parent = true
+texture = ExtResource("8_07jrm")
+
+[node name="Parallax2D5" type="Parallax2D" parent="Node2D" unique_id=325371507]
+show_behind_parent = true
+scale = Vector2(2.5, 2.5)
+scroll_scale = Vector2(1.3, 1)
+scroll_offset = Vector2(580, 321)
+repeat_size = Vector2(480, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Parallax2D5" unique_id=2079162970]
+show_behind_parent = true
+texture = ExtResource("9_tl63h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1942394088]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.0
+offset_top = 19.0
+offset_right = 151.0
+offset_bottom = 186.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_o4iyv")
+theme_override_constants/separation = 30
+
+[node name="StartGame" type="Button" parent="VBoxContainer" unique_id=2072388722]
+layout_mode = 2
+text = "Start Game"
+
+[node name="QuitGame" type="Button" parent="VBoxContainer" unique_id=591639985]
+layout_mode = 2
+text = "Quit Game"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=847090164]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("10_bh8sn")
+theme_override_font_sizes/normal_font_size = 70
+text = "Deadline"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=214019036]
+stream = ExtResource("5_lix63")
+autoplay = true
+parameters/looping = true

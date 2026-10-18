@@ -28,6 +28,11 @@ public partial class InkAudioPlayer : AudioStreamPlayer
         {
             instance = this;
         }
+        else
+        {
+            QueueFree();
+            return;
+        }
         GlobalEvents.OnTagsFound += GlobalEvent_OnTagsFound;
         GlobalEvents.OnPlaySFX += PlaySFX;
         GlobalEvents.OnPlayAmbience += PlayAmbience;

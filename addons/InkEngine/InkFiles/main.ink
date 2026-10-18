@@ -8,11 +8,11 @@
 VAR isPlaying = false
 
 ==init
-Now let's change the text here and see what happens, practically speaking. It updates. All the time.
+Now let's change the text here and see what happens, practically speaking. It updates. All the time. #SET_SPRITEBACKGROUND:scene_main
 
-Anyway. #SET_SPRITEBACKGROUND:example_scene
+Anyway.
 
-We wait a second. #SET_SPRITESUBTEXTURE:icon^true^poi_1
+We wait a second.
 
 + [Start over]
 ->init
@@ -32,6 +32,28 @@ Wind wind!
 #PLAY_AMBIENCE:None
 No wind.
 ->init
++ [Load level]
+Loading level 1. #LOAD_LEVEL:level_1 #clear
+->DONE
+
+==continuePlay
+And we're back!
+
+Hooray!
+
++ [Back to start]
+->init
+
+==story_knot_test
+This is a story knot! WooooOOoo! #SET_CAMERA_TARGET:Default^1^0
+
++ [Rock on.]
+We rock on.
++ [WOOOO]
+Woo. #continue
+-
+#UNPAUSE_LEVEL #continue
+->DONE
 
 
 ===function SpeechBubble(target, bubblepos, chain)

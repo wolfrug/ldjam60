@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://2bgaq61svkbu"]
+
+[ext_resource type="PackedScene" uid="uid://df0lmnfch85lh" path="res://PrototypeAssets/interactable_2d.tscn" id="1_warg2"]
+[ext_resource type="Texture2D" uid="uid://dn44g6kv3c8p" path="res://PrototypeAssets/RetroTechIconPack/RetroTechIconPack/RetroTechIconPack.png" id="2_81j8p"]
+
+[node name="Pickup" unique_id=433796135 instance=ExtResource("1_warg2")]
+_ID = "pickup"
+_type = 1000
+
+[node name="Sprite2D" parent="." index="0" unique_id=1405765264]
+position = Vector2(3.5762787e-07, -1.1920929e-07)
+scale = Vector2(0.22727272, 0.22727276)
+texture = ExtResource("2_81j8p")
+region_rect = Rect2(0, 0, 44.51526, 47.06063)
+
+[node name="InteractedFlag" parent="." index="3" unique_id=1153360675]
+position = Vector2(0.49999925, 4.5448542e-07)
+scale = Vector2(0.22916664, 0.20408165)
+region_rect = Rect2(0, 0, 46.472748, 49.151558)

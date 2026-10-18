@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cpg7tjyqxutkt"]
+
+[ext_resource type="PackedScene" uid="uid://df0lmnfch85lh" path="res://PrototypeAssets/interactable_2d.tscn" id="1_a641m"]
+
+[node name="StoryInteractable" unique_id=433796135 instance=ExtResource("1_a641m")]
+_ID = "baseStory"
+_type = 2000

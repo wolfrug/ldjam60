@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://uor0t2ytxw32"]
+
+[ext_resource type="Script" uid="uid://huj8s8tv1pqw" path="res://PrototypeAssets/BaseNavigationAgent2D.cs" id="1_vcgqp"]
+[ext_resource type="Texture2D" uid="uid://bml0vceiw6m2b" path="res://icon.svg" id="2_5uv8i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_13qdw"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+radius = 80.305664
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1111966876 node_paths=PackedStringArray("_navigationAgent", "_scanArea", "_rayCast", "_patrolRoute")]
+motion_mode = 1
+script = ExtResource("1_vcgqp")
+_navigationAgent = NodePath("NavigationAgent2D")
+_scanArea = NodePath("Area2D")
+_rayCast = NodePath("RayCast2D")
+_patrolRoute = NodePath("PatrolRoute")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1874480557]
+debug_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=638544581]
+shape = SubResource("CircleShape2D_13qdw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1949808870]
+self_modulate = Color(0.5370393, 0, 0.08217885, 1)
+scale = Vector2(0.078125, 0.078125)
+texture = ExtResource("2_5uv8i")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=470312640]
+target_position = Vector2(0, 81)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=993513641]
+collision_layer = 0
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1296433334]
+shape = SubResource("CircleShape2D_xrivr")
+
+[node name="PatrolRoute" type="Polygon2D" parent="." unique_id=2040198684]
+color = Color(1, 0, 0, 0.08627451)
+polygon = PackedVector2Array(0, 0, 4, 18, -29, 15, -17, -7)

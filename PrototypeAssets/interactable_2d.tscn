@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://df0lmnfch85lh"]
+
+[ext_resource type="Script" uid="uid://buiu6c5o6bgpy" path="res://PrototypeAssets/Interactable2D.cs" id="1_tyucc"]
+[ext_resource type="Texture2D" uid="uid://cuu3leg2kkxgp" path="res://PrototypeAssets/RetroTechIconPack/RetroTechIconPack/RetroTechIconPack(WhiteOutlines).png" id="2_1d1dp"]
+[ext_resource type="Texture2D" uid="uid://cggkqv3t7yjea" path="res://PrototypeAssets/prompt.png" id="3_l2tfn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(8, 8)
+
+[node name="Interactable2D" type="Area2D" unique_id=433796135 node_paths=PackedStringArray("interactPrompt", "interactedWithFlag")]
+script = ExtResource("1_tyucc")
+interactPrompt = NodePath("Prompt")
+interactedWithFlag = NodePath("InteractedFlag")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1405765264]
+position = Vector2(-2.3841858e-07, -2.3841858e-07)
+scale = Vector2(0.27272725, 0.24)
+texture = ExtResource("2_1d1dp")
+region_enabled = true
+region_rect = Rect2(243.9288, -0.8278961, 44.378387, 50.107544)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=401376475]
+shape = SubResource("RectangleShape2D_xrivr")
+
+[node name="Prompt" type="Sprite2D" parent="." unique_id=1459906725]
+visible = false
+position = Vector2(0.50000024, 0.50000024)
+scale = Vector2(0.359375, 0.359375)
+texture = ExtResource("3_l2tfn")
+
+[node name="InteractedFlag" type="Sprite2D" parent="." unique_id=1153360675]
+self_modulate = Color(0, 1, 0, 1)
+position = Vector2(-0.0039057732, -0.06249988)
+scale = Vector2(0.2792515, 0.2526042)
+texture = ExtResource("2_1d1dp")
+region_enabled = true
+region_rect = Rect2(244.02815, 0, 43.971848, 48.286396)

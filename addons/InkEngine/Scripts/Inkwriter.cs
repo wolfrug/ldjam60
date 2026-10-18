@@ -171,11 +171,13 @@ public partial class Inkwriter : CanvasLayer
 					{
 						skippingAwait = false;
 						ContinueStory();
+						return;
 					}
 				}
 				else
 				{
 					ContinueStory();
+					return;
 				}
 			}
 		}

@@ -55,6 +55,14 @@ public partial class InkLabel : Control
 		}
 		GlobalEvents.SendOnPlaySFX(new InkAudioEventArgs { audioPath = c_initAudio });
 	}
+	public override void _ExitTree()
+	{
+		base._ExitTree();
+		if (_tween != null)
+		{
+			_tween.Kill();
+		}
+	}
 	public string Text
 	{
 		get

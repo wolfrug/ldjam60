@@ -1,0 +1,54 @@
+[gd_scene format=4 uid="uid://dvthasmh02jd4"]
+
+[ext_resource type="PackedScene" uid="uid://cw3pypyg2mw5b" path="res://PrototypeAssets/player.tscn" id="2_3i8j8"]
+[ext_resource type="TileSet" uid="uid://1l5ili6gthnd" path="res://PrototypeAssets/default_tileset.tres" id="3_lxxgl"]
+[ext_resource type="TileSet" uid="uid://7m2bcmbs4tjm" path="res://PrototypeAssets/office_terrain_tileset.tres" id="3_yvhea"]
+[ext_resource type="Texture2D" uid="uid://bml0vceiw6m2b" path="res://icon.svg" id="4_is5ut"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_13qdw"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+radius = 80.305664
+
+[node name="Node2D" type="Node2D" unique_id=1483868119]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1600571795]
+
+[node name="Player" parent="." unique_id=1654438660 instance=ExtResource("2_3i8j8")]
+
+[node name="Enemy" type="CharacterBody2D" parent="." unique_id=1111966876]
+position = Vector2(89, 0)
+motion_mode = 1
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Enemy" unique_id=1874480557]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=638544581]
+shape = SubResource("CircleShape2D_13qdw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy" unique_id=1949808870]
+self_modulate = Color(0.5370393, 0, 0.08217885, 1)
+scale = Vector2(0.078125, 0.078125)
+texture = ExtResource("4_is5ut")
+
+[node name="RayCast2D" type="RayCast2D" parent="Enemy" unique_id=470312640]
+target_position = Vector2(0, 81)
+
+[node name="Area2D" type="Area2D" parent="Enemy" unique_id=993513641]
+collision_layer = 0
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Area2D" unique_id=1296433334]
+shape = SubResource("CircleShape2D_xrivr")
+
+[node name="PatrolRoute" type="Polygon2D" parent="Enemy" unique_id=2040198684]
+color = Color(1, 0, 0, 0.08627451)
+polygon = PackedVector2Array(0, 1, 7, 115, -174, 117, -178, -66)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1294610302]
+tile_map_data = PackedByteArray("AAAMAAsAAAAJAAIAAAANAAsAAAAJAAIAAAAOAAsAAAAJAAIAAAAPAAsAAAAJAAIAAAAPAAwAAAAJAAIAAAAPAA0AAAAJAAIAAAAOAA0AAAAJAAIAAAAOAA4AAAAJAAMAAAANAA4AAAAJAAMAAAAMAA4AAAAJAAMAAAAMAA0AAAAJAAIAAAAMAAwAAAAJAAIAAAANAAoAAAAKAAAAAAAOAAoAAAAKAAAAAAANAA0AAAAJAAIAAAANAAwAAAAJAAIAAAAOAAwAAAAJAAIAAAALAAwAAAAIAAEAAAAPAA4AAAAJAAMAAAALAA0AAAAIAAEAAAALAA4AAAAIAAMAAAAMAAoAAAAKAAAAAAALAAoAAAAIAAAAAAALAAsAAAAIAAEAAAAPAAoAAAAKAAAAAAARAAwAAAAJAAIAAAASAA0AAAAJAAIAAAARAA0AAAAJAAIAAAASAAwAAAAJAAIAAAASAAsAAAAJAAIAAAASAAoAAAAFAAEAAAASAAkAAAAIAAAAAAATAAkAAAALAAAAAAATAAoAAAALAAIAAAATAAsAAAALAAIAAAATAAwAAAALAAIAAAATAA0AAAALAAIAAAATAA4AAAALAAMAAAASAA4AAAAJAAMAAAARAA4AAAAJAAMAAAAQAA4AAAAJAAMAAAAQAA0AAAAJAAIAAAAQAAwAAAAJAAIAAAAQAAsAAAAJAAIAAAAQAAoAAAAKAAAAAAARAAoAAAAKAAAAAAARAAsAAAAJAAIAAAA=")
+tile_set = ExtResource("3_lxxgl")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1665476789]
+tile_map_data = PackedByteArray("AAALAAcAAgABAAAAAAALAAgAAgABAAEAAAALAAkAAgABAAIAAAAMAAcAAgAFAAQAAAAMAAgAAgAFAAUAAAAMAAkAAgAFAAYAAAANAAcAAgAGAAQAAAANAAgAAgAGAAUAAAANAAkAAgAGAAYAAAAOAAcAAgAHAAQAAAAOAAgAAgAHAAUAAAAOAAkAAgAHAAYAAAAPAAcAAgAIAAQAAAAPAAgAAgAIAAUAAAAPAAkAAgAIAAYAAAAQAAcAAgAJAAQAAAAQAAgAAgAJAAUAAAAQAAkAAgAJAAYAAAARAAcAAgAKAAQAAAARAAgAAgAKAAUAAAARAAkAAgAKAAYAAAASAAgAAgAJAAEAAAASAAkAAgAJAAIAAAASAAoAAgAKAAMAAAASAAsAAgAKAAQAAAATAAcAAgAKAAAAAAATAAgAAgAKAAEAAAATAAkAAgAKAAIAAAATAAoAAgAKAAMAAAATAAsAAgAKAAQAAAAUAAcAAgALAAAAAAAUAAgAAgALAAEAAAAUAAkAAgALAAIAAAAUAAoAAgALAAYAAAAUAAsAAgALAAYAAAAKAAcAAgAAAAAAAAAKAAgAAgAAAAEAAAAKAAkAAgAAAAIAAAAKAAoAAgAAAAMAAAAKAAsAAgAAAAQAAAAKAAwAAgAAAAcAAAAKAA0AAgAAAAgAAAAKAA4AAgAAAAkAAAALAAwAAgABAAcAAAALAA0AAgABAAgAAAALAA4AAgABAAkAAAAMAA0AAgACAAgAAAAMAA4AAgACAAkAAAANAA0AAgADAAgAAAANAA4AAgADAAkAAAAOAA0AAgAEAAgAAAAOAA4AAgAEAAkAAAAPAA0AAgAFAAgAAAAPAA4AAgAFAAkAAAAQAA0AAgAGAAgAAAAQAA4AAgAGAAkAAAARAA0AAgAHAAgAAAARAA4AAgAHAAkAAAASAA0AAgAIAAgAAAASAA4AAgAIAAkAAAATAA0AAgAJAAgAAAATAA4AAgAJAAkAAAAUAAwAAgALAAcAAAAUAA0AAgALAAgAAAAUAA4AAgALAAkAAAAOAAwAAgAEAAcAAAAPAAwAAgAFAAcAAAA=")
+tile_set = ExtResource("3_yvhea")

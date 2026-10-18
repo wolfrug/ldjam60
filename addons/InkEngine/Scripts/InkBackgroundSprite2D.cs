@@ -136,8 +136,15 @@ public partial class InkBackgroundSprite2D : Sprite2D
         string poi = "";
         if (coordinates.Length == 1)
         {
-            coords = presetCoordinates[coordinates[0]];
-            poi = coordinates[0];
+            if (presetCoordinates.TryGetValue(coordinates[0], out Vector2 outcoords))
+            {
+                coords = outcoords;
+                poi = coordinates[0];
+            }
+            else
+            { // No coordinates - we zero the camera
+                coords = Vector2.Zero;
+            }
         }
         else
         {
@@ -158,6 +165,7 @@ public partial class InkBackgroundSprite2D : Sprite2D
     }
     public void MoveCamera(InkSpriteBackgroundEventArgs args)
     {// Use: #SET_CAMERA_TARGET:45,-74^0.5^1 -> coordinates, zoom value, time
+        camera.MakeCurrent();
         Vector2 coords = args.targetCoords;
         float zoomValue = args.camZoom;
         float time = args.camTime;
@@ -275,11 +283,11 @@ public partial class InkBackgroundSprite2D : Sprite2D
         }
         GlobalEvents.SendOnInkSpriteBackgroundSubTexChanged(new InkSpriteBackgroundEventArgs
         {
-           targetNode = this,
-           newID = ID,
-           targetCoords = coords,
-           isVisible = show,
-           targetPOI = targetpoi,
+            targetNode = this,
+            newID = ID,
+            targetCoords = coords,
+            isVisible = show,
+            targetPOI = targetpoi,
         });
     }
     public void SetSubTexture2D(InkSpriteBackgroundEventArgs args)
@@ -287,7 +295,7 @@ public partial class InkBackgroundSprite2D : Sprite2D
         string ID = args.newID;
         bool show = args.isVisible;
         Vector2 coords = args.targetCoords;
-        
+
         // Check if it's already active
         if (activeSubTextures.TryGetValue(ID, out Node2D sprite))
         { // We fade it in or out and set its coords

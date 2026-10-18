@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://yxlyvuigpksb"]
+
+[ext_resource type="PackedScene" uid="uid://df0lmnfch85lh" path="res://PrototypeAssets/interactable_2d.tscn" id="1_e6ty3"]
+
+[node name="Exit" unique_id=433796135 instance=ExtResource("1_e6ty3")]
+_ID = "continuePlay"
+_type = 3000
+
+[node name="Sprite2D" parent="." index="0" unique_id=1405765264]
+scale = Vector2(0.24, 0.24)
+region_rect = Rect2(242.89407, 192.10815, 45.143097, 47.84076)
+
+[node name="InteractedFlag" parent="." index="3" unique_id=1153360675]
+visible = false

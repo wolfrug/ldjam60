@@ -36,6 +36,15 @@ public partial class InkButton : Button
 		GlobalEvents.SendOnUIShow(new UIEventArgs { targetNode = this });
 		base._Ready();
 	}
+	public override void _ExitTree()
+	{
+		base._ExitTree();
+		if (_tween != null)
+		{
+			_tween.Kill();
+		}
+	}
+
 
 	public virtual void Init(InkChoice choice)
 	{
