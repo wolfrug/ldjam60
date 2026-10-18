@@ -2,63 +2,71 @@
 
 [ext_resource type="Script" uid="uid://dbqrww8msjaf1" path="res://addons/InkEngine/Scripts/InkUI.cs" id="1_l2awu"]
 [ext_resource type="Script" uid="uid://coh24nstjnosq" path="res://addons/InkEngine/Scripts/InkLabel.cs" id="2_edok8"]
+[ext_resource type="Script" uid="uid://dwpe2aygrgs8f" path="res://scenes/InkUINode_Simple.cs" id="2_t8tlf"]
+[ext_resource type="Texture2D" uid="uid://duhmekse7uco" path="res://PrototypeAssets/flixberry_entertainment_old_paper_paper_1_1_800x500.png" id="3_edok8"]
 [ext_resource type="Theme" uid="uid://dp7p64i6xy7hr" path="res://addons/InkEngine/UI/dialogbox_theme.tres" id="3_t8tlf"]
 [ext_resource type="FontFile" uid="uid://dltv4busrb83q" path="res://fonts/ShadowsIntoLight-Regular.ttf" id="4_mkprq"]
 
-[sub_resource type="Theme" id="Theme_8f1fl"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
-bg_color = Color(0.6134126, 0.5287752, 0.20693955, 1)
-corner_radius_top_left = 13
-corner_radius_top_right = 13
-corner_radius_bottom_right = 13
-corner_radius_bottom_left = 13
-corner_detail = 11
-shadow_size = 3
-shadow_offset = Vector2(8.19, 9.54)
-
-[node name="ObjectivesList" type="Node2D" unique_id=1364791821]
-
-[node name="Panel" type="CanvasLayer" parent="." unique_id=904494866 node_paths=PackedStringArray("customLabels")]
+[node name="Panel" type="CanvasLayer" unique_id=904494866 node_paths=PackedStringArray("customLabels", "customActivatorNodes")]
 script = ExtResource("1_l2awu")
 customLabels = {
-"List": NodePath("AspectRatioContainer/InkLabel")
+"List": NodePath("Control/InkLabel")
+}
+customActivatorNodes = {
+"ToDoList": NodePath("Control")
 }
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Panel" unique_id=2130849648]
-offset_right = 188.0
-offset_bottom = 302.0
-ratio = 0.6491
-stretch_mode = 0
+[node name="Control" type="Control" parent="." unique_id=646842299]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -133.0
+offset_top = -161.5
+offset_right = 133.0
+offset_bottom = 161.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_t8tlf")
 
-[node name="InkLabel" type="BoxContainer" parent="Panel/AspectRatioContainer" unique_id=648605235 node_paths=PackedStringArray("textLabel", "container")]
-layout_mode = 2
+[node name="InkLabel" type="BoxContainer" parent="Control" unique_id=648605235 node_paths=PackedStringArray("textLabel", "container")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -11.0
+offset_top = 1.0
+offset_right = -6.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 vertical = true
 script = ExtResource("2_edok8")
-textLabel = NodePath("Panel/MarginContainer/RichTextLabel")
-container = NodePath("Panel")
+textLabel = NodePath("MarginContainer/RichTextLabel")
+container = NodePath("")
 
-[node name="Panel" type="PanelContainer" parent="Panel/AspectRatioContainer/InkLabel" unique_id=1889959205]
-z_as_relative = false
-layout_mode = 2
-size_flags_vertical = 3
-theme = SubResource("Theme_8f1fl")
-theme_override_styles/panel = SubResource("StyleBoxFlat_xrivr")
-
-[node name="MarginContainer" type="MarginContainer" parent="Panel/AspectRatioContainer/InkLabel/Panel" unique_id=837264908]
+[node name="MarginContainer" type="MarginContainer" parent="Control/InkLabel" unique_id=837264908]
 layout_mode = 2
 theme_override_constants/margin_left = 9
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/AspectRatioContainer/InkLabel/Panel/MarginContainer" unique_id=691433562]
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/InkLabel/MarginContainer" unique_id=691433562]
 layout_mode = 2
 theme = ExtResource("3_t8tlf")
 theme_override_fonts/normal_font = ExtResource("4_mkprq")
+theme_override_font_sizes/normal_font_size = 23
 bbcode_enabled = true
-text = "To do list.
-
-"
+text = "To do:[br]Collect 1 x Flip Phone.[br]Collect 1 x Walkman.[br]Collect 2 x Floppy Disks.[br]Collect 1 x Joystick.[br][br]Thank you![br][br]Your benefactor,[br]The Collector"
 fit_content = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=553004714]
+show_behind_parent = true
+position = Vector2(124.99998, 182.00002)
+scale = Vector2(0.35500002, 0.724)
+texture = ExtResource("3_edok8")

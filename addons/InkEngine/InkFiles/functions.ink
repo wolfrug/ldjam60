@@ -3,6 +3,25 @@
 LIST characters = Deya, Zayne
 LIST emotions = Angry, Neutral1, Neutral2, Sad, Shock, Smile1, Smile2, Smirk1, Smirk2
 
+LIST oldTek =  FlipPhone,IPod, Walkman, CDPlayer, Camera, CellPhone, BoomBox, ReelRecorder, VHS, CassetteRecorder, Pager, FaxMachine, Calculator, HDD, CardReader, BarcodeScanner, PaperCutter, CashRegister,FloppyDisk, CD, CRTMonitor, Joystick, Printer, VinylPlayer, Radio,TV,TVRemote,SlideProjector,ArcadeMachine,Clock
+
+==toDoList
+#ToDoList^true #clear
+To do:[br][br]#List
+
+<>Collect 1 x Flip Phone.[br] #List
+<>Collect 1 x Walkman.[br] #List
+<>Collect 2 x Floppy Disks.[br] #List
+<>Collect 1 x Joystick.[br][br] #List
+
+<>Thank you![br] #List
+
+<>Your benefactor,[br]The Collector #List
+
+#ToDoList^false
+->->
+
+
 ===function ClearPortraits()
 #SET_PORTRAIT_LEFT:None
 #SET_PORTRAIT_RIGHT:None

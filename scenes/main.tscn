@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://cppej883pf1fl" path="res://scripts/PanCameraController.cs" id="9_85g3d"]
 [ext_resource type="Texture2D" uid="uid://bslaxc7g3fvqv" path="res://PrototypeAssets/base_background.png" id="9_jkv2x"]
 [ext_resource type="Script" uid="uid://cj5wxap7c55hl" path="res://addons/InkEngine/Scripts/InkBackgroundSprite2D.cs" id="10_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://b8t3d22ixp1u3" path="res://scenes/objectives_list.tscn" id="12_eb6dy"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xrivr"]
 
@@ -80,6 +81,14 @@ metadata/_custom_type_script = "uid://cppej883pf1fl"
 texture = ExtResource("9_jkv2x")
 script = ExtResource("10_jkv2x")
 camera = NodePath("../PanCameraController")
+
+[node name="Panel" parent="." unique_id=904494866 node_paths=PackedStringArray("customLabels", "customActivatorNodes") instance=ExtResource("12_eb6dy")]
+customLabels = {
+"List": NodePath("Control/InkLabel")
+}
+customActivatorNodes = {
+"ToDoList": NodePath("Control")
+}
 
 [connection signal="InkCameraEndPan" from="Background/BackgroundSprite" to="Background/PanCameraController" method="SetControlsOn"]
 [connection signal="InkCameraStartPan" from="Background/BackgroundSprite" to="Background/PanCameraController" method="SetControlsOff"]

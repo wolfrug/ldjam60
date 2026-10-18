@@ -170,7 +170,7 @@ public partial class InkBackgroundSprite2D : Sprite2D
         Vector2 coords = args.targetCoords;
         float zoomValue = args.camZoom;
         float time = args.camTime;
-        
+
         _cameraTween?.Kill();
 
         _cameraTween = GetTree().CreateTween();
@@ -298,7 +298,7 @@ public partial class InkBackgroundSprite2D : Sprite2D
         string ID = args.newID;
         bool show = args.isVisible;
         Vector2 coords = args.targetCoords;
-
+        GD.Print("InkBackgroundSprite2D: received Set Subtexture command for ID " + ID + " with args isVisible: " + show);
         // Check if it's already active
         if (activeSubTextures.TryGetValue(ID, out Node2D sprite))
         { // We fade it in or out and set its coords
@@ -339,16 +339,20 @@ public partial class InkBackgroundSprite2D : Sprite2D
     }
     public void HideSubTexture2D(string ID)
     {
+        GD.Print("Attempting to hide subtexture with ID " + ID);
         // Try to find it in the current scene
         if (activeSubTextures.TryGetValue(ID, out Node2D subTexSprite))
         {
+            GD.Print("Found subtexture with ID " + ID);
             // Found! We fade it out if it's a sprite2D
             if (subTexSprite is Sprite2D)
             {
+                GD.Print("Subtexture with ID " + ID + " is a sprite, fading out");
                 FadeSubTextureSprite(subTexSprite as Sprite2D, false);
             }
             else
             {
+                GD.Print("Subtexture with ID " + ID + " is NOT a sprite, setting visible to false");
                 subTexSprite.Visible = false;
             }
         }
