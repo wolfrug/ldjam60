@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://dehr5qsiby1hf"]
+
+[ext_resource type="Texture2D" uid="uid://c5uk5mamnot37" path="res://PrototypeAssets/Post Apoc Office - Asset Pack/Post Apoc Office - Asset Pack/Post Apoc - Office 16x16 Grid/Office_Exterior_16x16_Shadow.png" id="1_fteks"]
+[ext_resource type="Texture2D" uid="uid://67tl53fec3y" path="res://PrototypeAssets/Post Apoc Office - Asset Pack/Post Apoc Office - Asset Pack/Post Apoc - Office 16x16 Grid/apoc_furniture-sprites/assets/apoc_furniture_01.png" id="2_nk7r5"]
+[ext_resource type="Texture2D" uid="uid://brmdi3w5irupv" path="res://PrototypeAssets/Post Apoc Office - Asset Pack/Post Apoc Office - Asset Pack/Post Apoc - Office 16x16 Grid/apoc_furniture-sprites/assets/apoc_furniture_03.png" id="3_mtnb8"]
+[ext_resource type="Texture2D" uid="uid://bpfy52bjyppba" path="res://PrototypeAssets/Post Apoc Office - Asset Pack/Post Apoc Office - Asset Pack/Post Apoc - Office 16x16 Grid/apoc_furniture-sprites/assets/apoc_furniture_04.png" id="4_pftx5"]
+[ext_resource type="Texture2D" uid="uid://crfj5na0452ti" path="res://PrototypeAssets/Post Apoc Office - Asset Pack/Post Apoc Office - Asset Pack/Post Apoc - Office 16x16 Grid/apoc_furniture-sprites/assets/apoc_furniture_20.png" id="5_nilft"]
+[ext_resource type="Texture2D" uid="uid://bu8d0lq181swg" path="res://PrototypeAssets/Post Apoc Office - Asset Pack/Post Apoc Office - Asset Pack/Post Apoc - Office 16x16 Grid/apoc_furniture-sprites/assets/apoc_furniture_37.png" id="6_umjob"]
+[ext_resource type="Texture2D" uid="uid://cjgws2wjlc42n" path="res://PrototypeAssets/Post Apoc Office - Asset Pack/Post Apoc Office - Asset Pack/Post Apoc - Office 16x16 Grid/apoc_furniture-sprites/assets/apoc_furniture_113.png" id="7_81cn1"]
+
+[node name="Ruin" type="Node2D" unique_id=617027131]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=596945706]
+scroll_scale = Vector2(1.2, 1)
+repeat_size = Vector2(200, 0)
+repeat_times = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=948326299]
+texture = ExtResource("1_fteks")
+region_enabled = true
+region_rect = Rect2(9.263161, 273.69998, 236.5192, 78.30002)
+
+[node name="ApocFurniture01" type="Sprite2D" parent="Parallax2D" unique_id=1130046334]
+z_index = 1
+position = Vector2(-83, -23)
+texture = ExtResource("2_nk7r5")
+
+[node name="ApocFurniture03" type="Sprite2D" parent="Parallax2D" unique_id=1776978444]
+position = Vector2(95, -6)
+texture = ExtResource("3_mtnb8")
+
+[node name="ApocFurniture04" type="Sprite2D" parent="Parallax2D" unique_id=1846507835]
+position = Vector2(13, 1)
+texture = ExtResource("4_pftx5")
+
+[node name="ApocFurniture20" type="Sprite2D" parent="Parallax2D" unique_id=1388175396]
+position = Vector2(-90, 2)
+texture = ExtResource("5_nilft")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1510596492]
+scroll_scale = Vector2(1.3, 1)
+repeat_size = Vector2(1000, 0)
+repeat_times = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=1066644235]
+position = Vector2(57, 59)
+texture = ExtResource("6_umjob")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D2" unique_id=672969135]
+position = Vector2(-123, 79)
+texture = ExtResource("7_81cn1")

@@ -6,24 +6,6 @@
 [ext_resource type="FontFile" uid="uid://7i1rd6ldk70t" path="res://fonts/komika/KOMIKHI_.ttf" id="6_fnhvt"]
 [ext_resource type="FontFile" uid="uid://8g5p70wh2or4" path="res://fonts/komika/KOMIKAH_.ttf" id="7_yk10p"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vqord"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
-shadow_color = Color(0.04, 0.04, 0.04, 0.69803923)
-shadow_size = 6
-shadow_offset = Vector2(5, 5)
-
 [resource]
 GridContainer/constants/h_separation = 15
 GridContainer/constants/v_separation = 15
@@ -34,7 +16,7 @@ MarginContainer/constants/margin_bottom = 30
 MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10
 MarginContainer/constants/margin_top = 10
-Panel/styles/panel = SubResource("StyleBoxFlat_vqord")
+Panel/styles/panel = ExtResource("1_v73if")
 PanelContainer/styles/panel = ExtResource("1_v73if")
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/fonts/bold_font = ExtResource("4_80q75")

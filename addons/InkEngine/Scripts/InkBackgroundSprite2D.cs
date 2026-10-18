@@ -163,19 +163,22 @@ public partial class InkBackgroundSprite2D : Sprite2D
             targetNode = this
         });
     }
+    Tween _cameraTween;
     public void MoveCamera(InkSpriteBackgroundEventArgs args)
     {// Use: #SET_CAMERA_TARGET:45,-74^0.5^1 -> coordinates, zoom value, time
         camera.MakeCurrent();
         Vector2 coords = args.targetCoords;
         float zoomValue = args.camZoom;
         float time = args.camTime;
+        
+        _cameraTween?.Kill();
 
-        Tween tween = GetTree().CreateTween();
+        _cameraTween = GetTree().CreateTween();
         EmitSignal(SignalName.InkCameraStartPan);
-        tween.TweenProperty(camera, PropertyName.Position.ToString(), coords, time).SetTrans(Tween.TransitionType.Sine);
-        tween.SetParallel(true);
-        tween.TweenProperty(camera, "zoom", new Vector2(zoomValue, zoomValue), time).SetTrans(Tween.TransitionType.Sine);
-        tween.Chain().TweenCallback(Callable.From(() => EmitSignal(SignalName.InkCameraEndPan)));
+        _cameraTween.TweenProperty(camera, PropertyName.Position.ToString(), coords, time).SetTrans(Tween.TransitionType.Sine);
+        _cameraTween.SetParallel(true);
+        _cameraTween.TweenProperty(camera, "zoom", new Vector2(zoomValue, zoomValue), time).SetTrans(Tween.TransitionType.Sine);
+        _cameraTween.Chain().TweenCallback(Callable.From(() => EmitSignal(SignalName.InkCameraEndPan)));
     }
 
     Tween _tween;

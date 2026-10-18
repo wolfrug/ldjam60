@@ -10,12 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cvs7dcu5noyax" path="res://addons/InkEngine/Scenes/InkUI.tscn" id="8_85g3d"]
 [ext_resource type="Script" uid="uid://cppej883pf1fl" path="res://scripts/PanCameraController.cs" id="9_85g3d"]
 [ext_resource type="Texture2D" uid="uid://bslaxc7g3fvqv" path="res://PrototypeAssets/base_background.png" id="9_jkv2x"]
-[ext_resource type="Texture2D" uid="uid://cwxh827trv8qh" path="res://PrototypeAssets/Background_LittleSmithItchIo/1.png" id="10_choun"]
 [ext_resource type="Script" uid="uid://cj5wxap7c55hl" path="res://addons/InkEngine/Scripts/InkBackgroundSprite2D.cs" id="10_jkv2x"]
-[ext_resource type="Texture2D" uid="uid://b3p8d8nsjnub1" path="res://PrototypeAssets/Background_LittleSmithItchIo/2.png" id="11_a8y0u"]
-[ext_resource type="Texture2D" uid="uid://v8hm0qg7psrj" path="res://PrototypeAssets/Background_LittleSmithItchIo/3.png" id="12_jkv2x"]
-[ext_resource type="Texture2D" uid="uid://foamn73i04mv" path="res://PrototypeAssets/Background_LittleSmithItchIo/4.png" id="13_jbj1t"]
-[ext_resource type="Texture2D" uid="uid://bht0cboxq5ccq" path="res://PrototypeAssets/Background_LittleSmithItchIo/5.png" id="14_muem4"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xrivr"]
 
@@ -71,56 +66,20 @@ texture = SubResource("PlaceholderTexture2D_xrivr")
 [node name="PanCameraController" type="Camera2D" parent="Background" unique_id=538349284 node_paths=PackedStringArray("TargetSprite")]
 script = ExtResource("9_85g3d")
 TargetSprite = NodePath("../BackgroundSprite")
-EdgePanSpeed = Vector2(200, 200)
+MaxPanSpeed = Vector2(50, 0)
+EdgePanSpeed = Vector2(50, 0)
+EdgePanStartMarginPercent = 0.5
+EdgePanStartMarginPixels = 25.0
+ZoomEnabled = false
 MinZoom = 4.0
-MaxZoom = 5.0
-ClampZoomToImageBounds = true
+MaxZoom = 8.0
+ForcePanDuration = 1.0
 metadata/_custom_type_script = "uid://cppej883pf1fl"
 
 [node name="BackgroundSprite" type="Sprite2D" parent="Background" unique_id=1769587166 node_paths=PackedStringArray("camera")]
 texture = ExtResource("9_jkv2x")
 script = ExtResource("10_jkv2x")
 camera = NodePath("../PanCameraController")
-
-[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=1345441894]
-scroll_scale = Vector2(-0.1, 1)
-repeat_size = Vector2(480, 0)
-repeat_times = 10
-
-[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D" unique_id=314682476]
-texture = ExtResource("10_choun")
-
-[node name="Parallax2D2" type="Parallax2D" parent="Background" unique_id=359120498]
-scroll_scale = Vector2(0.4, 1)
-repeat_size = Vector2(480, 0)
-repeat_times = 5
-
-[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D2" unique_id=1650008362]
-texture = ExtResource("11_a8y0u")
-
-[node name="Parallax2D3" type="Parallax2D" parent="Background" unique_id=501692934]
-scroll_scale = Vector2(0.6, 1)
-repeat_size = Vector2(480, 0)
-repeat_times = 5
-
-[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D3" unique_id=1076515606]
-texture = ExtResource("12_jkv2x")
-
-[node name="Parallax2D4" type="Parallax2D" parent="Background" unique_id=586242696]
-scroll_scale = Vector2(0.7, 1)
-repeat_size = Vector2(480, 0)
-repeat_times = 5
-
-[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D4" unique_id=822924420]
-texture = ExtResource("13_jbj1t")
-
-[node name="Parallax2D5" type="Parallax2D" parent="Background" unique_id=680431590]
-scroll_scale = Vector2(0.9, 1)
-repeat_size = Vector2(480, 0)
-repeat_times = 5
-
-[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D5" unique_id=1193975946]
-texture = ExtResource("14_muem4")
 
 [connection signal="InkCameraEndPan" from="Background/BackgroundSprite" to="Background/PanCameraController" method="SetControlsOn"]
 [connection signal="InkCameraStartPan" from="Background/BackgroundSprite" to="Background/PanCameraController" method="SetControlsOff"]

@@ -9,7 +9,7 @@ public partial class InkPortrait : TextureRect
 
     [Export]
     public RichTextLabel nameText;
-    private const string c_setPortrait = "SET_PORTRAIT:";
+    [Export] public string c_setPortrait = "SET_PORTRAIT:";
     private const char c_delimimiter = '^';
     // Called when the node enters the scene tree for the first time.
     public override void _EnterTree()
@@ -44,6 +44,11 @@ public partial class InkPortrait : TextureRect
         string cleanedText = tag.Replace(c_setPortrait, "");
         string[] stringParts = cleanedText.Split(c_delimimiter);
         string id = stringParts[0];
+        string name = "";
+        if (stringParts.Length > 1)
+        {
+            name = stringParts[1];
+        }
 
         Texture2D tex = GlobalVariables.GetPortraitTexture2D(id);
         if (tex != Texture)
@@ -66,6 +71,7 @@ public partial class InkPortrait : TextureRect
                 tween.TweenProperty(GetNode(GetPath()), "modulate:a", 0f, 0.25f).SetTrans(Tween.TransitionType.Sine);
             }
         }
+        SetText(name);
     }
     public void SetTexture2D(Texture2D texture)
     {

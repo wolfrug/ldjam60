@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://yxlyvuigpksb" path="res://PrototypeAssets/exit.tscn" id="6_sbcrk"]
 [ext_resource type="PackedScene" uid="uid://cpg7tjyqxutkt" path="res://PrototypeAssets/story_interactable.tscn" id="6_t5yrb"]
 [ext_resource type="TileSet" uid="uid://7m2bcmbs4tjm" path="res://PrototypeAssets/office_terrain_tileset.tres" id="7_sbcrk"]
-[ext_resource type="Texture2D" uid="uid://bjxa2pfpnaooa" path="res://PrototypeAssets/The Female Adventurer - Free/The Female Adventurer - Free/Walk/walk_Right_Down.png" id="8_oi8n7"]
+[ext_resource type="PackedScene" uid="uid://uor0t2ytxw32" path="res://PrototypeAssets/enemy.tscn" id="8_oi8n7"]
 
 [node name="LevelManager" type="Node" unique_id=1822733210 node_paths=PackedStringArray("tilemaps")]
 script = ExtResource("1_rk40m")
@@ -32,7 +32,7 @@ position = Vector2(246, 20)
 
 [node name="StoryInteractable" parent="Node2D/TileMapLayer" unique_id=2115961135 instance=ExtResource("6_t5yrb")]
 z_as_relative = false
-position = Vector2(176, 95)
+position = Vector2(177, 112)
 _ID = "story_knot_test"
 
 [node name="Exit" parent="Node2D/TileMapLayer" unique_id=303160345 instance=ExtResource("6_sbcrk")]
@@ -55,7 +55,5 @@ tile_set = ExtResource("7_sbcrk")
 tile_map_data = PackedByteArray("AAALAP//AgAJAAUAAAALAAAAAgAJAAIAAAALAAEAAwATAAYAAAAMAP//AgAKAAUAAAAMAAAAAgAKAAIAAAAMAAEAAwAUAAYAAAACAP7/AgAAAAAAAAACAP//AgAAAAEAAAACAAAAAgAAAAIAAAADAP7/AgABAAAAAAADAP//AgABAAEAAAADAAAAAgABAAIAAAAEAP7/AgACAAAAAAAEAP//AgACAAUAAAAEAAAAAgACAAYAAAAFAP7/AgADAAAAAAAFAP//AgADAAUAAAAFAAAAAgADAAYAAAAGAP7/AgAEAAQAAAAGAP//AgAEAAUAAAAGAAAAAgAEAAYAAAAHAP7/AgAFAAQAAAAHAP//AgAFAAUAAAAHAAAAAgAFAAYAAAAIAP7/AgAGAAQAAAAIAP//AgAGAAUAAAAIAAAAAgAGAAYAAAAJAP7/AgAHAAQAAAAJAP//AgAHAAUAAAAJAAAAAgAHAAYAAAAKAP7/AgAIAAQAAAAKAP//AgAIAAUAAAAKAAAAAgAIAAYAAAALAP7/AgAJAAQAAAARAP7/AgALAAAAAAARAP//AgALAAEAAAARAAAAAgALAAIAAAARAAEAAgALAAMAAAAQAP7/AgAKAAAAAAAQAP//AgAKAAEAAAAQAAAAAgAKAAIAAAANAP//AgAHAAEAAAANAAAAAgAHAAIAAAAOAP//AgAIAAEAAAAOAAAAAgAIAAIAAAAPAP//AgAJAAEAAAAPAAAAAgAJAAIAAAAHAP3/AgAFAAMAAAAIAP3/AgAGAAMAAAAGAP3/AgAEAAMAAAA=")
 tile_set = ExtResource("7_sbcrk")
 
-[node name="WalkRightDown" type="Sprite2D" parent="." unique_id=218634442]
-position = Vector2(191, 34)
-texture = ExtResource("8_oi8n7")
-hframes = 8
+[node name="Enemy" parent="Node2D/TileMapLayer" unique_id=1111966876 instance=ExtResource("8_oi8n7")]
+position = Vector2(221, 122)

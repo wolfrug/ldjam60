@@ -42,6 +42,7 @@ public partial class LevelManager : Node
             }
         }
         GlobalEvents.SendOnLevelLoaded(new LevelEventArgs { manager = this });
+        GlobalEvents.SendOnPlayAmbience(new InkAudioEventArgs{audioPath = "AmbienceRuin"});
     }
     public override void _EnterTree()
     {

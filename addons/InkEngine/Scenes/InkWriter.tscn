@@ -4,6 +4,7 @@
 [ext_resource type="Theme" uid="uid://dp7p64i6xy7hr" path="res://addons/InkEngine/UI/dialogbox_theme.tres" id="1_umhqq"]
 [ext_resource type="Script" uid="uid://qju08u1chs41" path="res://addons/InkEngine/Scripts/InkScrollContainer.cs" id="2_6b8iu"]
 [ext_resource type="PackedScene" uid="uid://1we70hiin1om" path="res://addons/InkEngine/Scenes/InkBackgroundUI.tscn" id="5_dh1ed"]
+[ext_resource type="Texture2D" uid="uid://d0osuyix1ny0i" path="res://addons/InkEngine/Graphics/Portraits/Deya/Angry.png" id="5_yr2o3"]
 [ext_resource type="PackedScene" uid="uid://cx1wvq3fyad0h" path="res://addons/InkEngine/Scenes/InkPortrait.tscn" id="6_togga"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rtbp5"]
@@ -18,15 +19,14 @@ continueMaximally = false
 continueInput = "ink_continue"
 
 [node name="Panel" type="Panel" parent="." unique_id=2146954083]
-anchors_preset = -1
-anchor_left = 0.70000005
-anchor_top = 0.009000001
-anchor_right = 0.994
-anchor_bottom = 0.97900003
-offset_left = -45.400024
-offset_top = 0.16799974
-offset_right = -45.231934
-offset_bottom = -0.43206787
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -282.0
+offset_right = 301.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1_umhqq")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Panel" unique_id=190541384]
@@ -39,7 +39,6 @@ grow_vertical = 2
 theme_override_constants/separation = 8
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer2" unique_id=407430642]
-clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -47,20 +46,20 @@ size_flags_stretch_ratio = 1.58
 theme_override_constants/margin_right = 25
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel/VBoxContainer2/MarginContainer" unique_id=1165308149]
+clip_contents = false
 layout_mode = 2
 follow_focus = true
 horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
 script = ExtResource("2_6b8iu")
 
 [node name="InkWriterVBox" type="VBoxContainer" parent="Panel/VBoxContainer2/MarginContainer/ScrollContainer" unique_id=1057545831]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/separation = 10
 alignment = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="Panel/VBoxContainer2" unique_id=1438678272]
-clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -70,6 +69,7 @@ theme_override_constants/margin_right = 25
 layout_mode = 2
 follow_focus = true
 horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
 script = ExtResource("2_6b8iu")
 
 [node name="InkWriterVBox" type="VBoxContainer" parent="Panel/VBoxContainer2/MarginContainer2/ScrollContainer" unique_id=1172005414]
@@ -81,25 +81,49 @@ size_flags_vertical = 3
 theme_override_constants/separation = 10
 alignment = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1811033083]
+[node name="LeftPortrait" type="VBoxContainer" parent="Panel" unique_id=1811033083]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.071
+anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = -295.35205
-offset_top = -9.0
-offset_right = -35.442055
-offset_bottom = -3.0
+offset_left = -348.0
+offset_right = 2.0
+grow_vertical = 2
 mouse_filter = 2
-alignment = 1
+alignment = 2
 
-[node name="PortraitContainer" type="BoxContainer" parent="Panel/VBoxContainer" unique_id=1329970533]
+[node name="PortraitContainer" type="BoxContainer" parent="Panel/LeftPortrait" unique_id=1329970533]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="InkPortrait" parent="Panel/VBoxContainer/PortraitContainer" unique_id=2129696352 instance=ExtResource("6_togga")]
+[node name="InkPortrait" parent="Panel/LeftPortrait/PortraitContainer" unique_id=2129696352 instance=ExtResource("6_togga")]
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
+texture = ExtResource("5_yr2o3")
+flip_h = true
+c_setPortrait = "SET_PORTRAIT_LEFT:"
+
+[node name="RightPortrait" type="VBoxContainer" parent="Panel" unique_id=1300492044]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_right = 295.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="PortraitContainer" type="BoxContainer" parent="Panel/RightPortrait" unique_id=574388912]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="InkPortrait" parent="Panel/RightPortrait/PortraitContainer" unique_id=1336508236 instance=ExtResource("6_togga")]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+texture = ExtResource("5_yr2o3")
+c_setPortrait = "SET_PORTRAIT_RIGHT:"
 
 [node name="InkBackgroundContainer" type="PanelContainer" parent="." unique_id=1272348965]
 self_modulate = Color(1, 1, 1, 0)

@@ -1,32 +1,268 @@
 [gd_scene format=3 uid="uid://uor0t2ytxw32"]
 
-[ext_resource type="Script" uid="uid://huj8s8tv1pqw" path="res://PrototypeAssets/BaseNavigationAgent2D.cs" id="1_vcgqp"]
-[ext_resource type="Texture2D" uid="uid://bml0vceiw6m2b" path="res://icon.svg" id="2_5uv8i"]
+[ext_resource type="Script" uid="uid://cj5ccdgniq6ur" path="res://PrototypeAssets/EnemyNavigationAgent2D.cs" id="1_tg673"]
+[ext_resource type="Texture2D" uid="uid://bbcdm1ggnil8a" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_23.png" id="2_cqq56"]
+[ext_resource type="Texture2D" uid="uid://bnmj4k3yflqo1" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_24.png" id="3_8kl14"]
+[ext_resource type="Texture2D" uid="uid://d3c5ahrct4ka" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_25.png" id="4_ghkuk"]
+[ext_resource type="Texture2D" uid="uid://die3i0ov7dr5h" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_26.png" id="5_qld3b"]
+[ext_resource type="Texture2D" uid="uid://w3efef2juloa" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_27.png" id="6_oejra"]
+[ext_resource type="Texture2D" uid="uid://7q3aqa2ccsnk" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_28.png" id="7_g88v0"]
+[ext_resource type="Texture2D" uid="uid://1nrrlrerjog2" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_29.png" id="8_i6si5"]
+[ext_resource type="Texture2D" uid="uid://dqxitpqflpox6" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_30.png" id="9_dxhms"]
+[ext_resource type="Texture2D" uid="uid://bgn7ra6uluc43" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_31.png" id="10_8l3nj"]
+[ext_resource type="Texture2D" uid="uid://b35gonutt0vpy" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_32.png" id="11_5alye"]
+[ext_resource type="Texture2D" uid="uid://dut7t7uchq7ec" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_34.png" id="12_fyvio"]
+[ext_resource type="Texture2D" uid="uid://cwnc2lh4adpfy" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_35.png" id="13_t30a5"]
+[ext_resource type="Texture2D" uid="uid://b6u2dh5ie114x" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_36.png" id="14_k7luv"]
+[ext_resource type="Texture2D" uid="uid://hr7okxligr5p" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_37.png" id="15_jehn7"]
+[ext_resource type="Texture2D" uid="uid://dhoabw6vldw5h" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_38.png" id="16_qrqqe"]
+[ext_resource type="Texture2D" uid="uid://d2j2wd0la6qbc" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_39.png" id="17_esvdd"]
+[ext_resource type="Texture2D" uid="uid://rx8ids680ush" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_40.png" id="18_xnp8s"]
+[ext_resource type="Texture2D" uid="uid://cp7rfrcm6w7bw" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_41.png" id="19_qaae1"]
+[ext_resource type="Texture2D" uid="uid://bxymk0qlxiibe" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_42.png" id="20_8qoen"]
+[ext_resource type="Texture2D" uid="uid://cv1utcgreskpc" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_43.png" id="21_nllq4"]
+[ext_resource type="Texture2D" uid="uid://cdgq06v4sbcli" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_44.png" id="22_7sbsh"]
+[ext_resource type="Texture2D" uid="uid://cllfj058e6upb" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_01.png" id="23_3hw0f"]
+[ext_resource type="Texture2D" uid="uid://dgtqhia5t2vry" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_02.png" id="24_rng1a"]
+[ext_resource type="Texture2D" uid="uid://bfgxe0qibmf7n" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_03.png" id="25_2cx0e"]
+[ext_resource type="Texture2D" uid="uid://i27h6s5gyypf" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_04.png" id="26_0g4kp"]
+[ext_resource type="Texture2D" uid="uid://ct1ols4d5pscb" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_05.png" id="27_wkopd"]
+[ext_resource type="Texture2D" uid="uid://3unniwr1i0rv" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_06.png" id="28_qwgk0"]
+[ext_resource type="Texture2D" uid="uid://wgebm0xucs6b" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_07.png" id="29_b8evp"]
+[ext_resource type="Texture2D" uid="uid://cc4kijjusgile" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_08.png" id="30_xcwl6"]
+[ext_resource type="Texture2D" uid="uid://s6dwk1w5dcot" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_12.png" id="31_ppcq1"]
+[ext_resource type="Texture2D" uid="uid://6gq80kjdtoc4" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_13.png" id="32_b5q81"]
+[ext_resource type="Texture2D" uid="uid://djpxsic1k47j6" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_14.png" id="33_6hsie"]
+[ext_resource type="Texture2D" uid="uid://c2bphkhhpm5rk" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_15.png" id="34_4yc5b"]
+[ext_resource type="Texture2D" uid="uid://d33hq5tmcbsf7" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_16.png" id="35_nyq8i"]
+[ext_resource type="Texture2D" uid="uid://c06w4ohbecyu3" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_17.png" id="36_pwvqm"]
+[ext_resource type="Texture2D" uid="uid://rt5k1yed8oy3" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-lila.pieces/sheet-metal-monster-lila_18.png" id="37_mtrkh"]
+[ext_resource type="Texture2D" uid="uid://5s65lx7if3ko" path="res://PrototypeAssets/heirey_itchio_Metal Monster/Metal Monster/sheet-metal-monster-shadow.png" id="38_cqq56"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_13qdw"]
 radius = 6.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cqq56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8kl14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ghkuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qld3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oejra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_g88v0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_i6si5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dxhms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8l3nj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5alye")
+}],
+"loop": 0,
+"name": &"attack",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_fyvio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_t30a5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_k7luv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jehn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qrqqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_esvdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_xnp8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qaae1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8qoen")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_nllq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_7sbsh")
+}],
+"loop": 0,
+"name": &"die",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_3hw0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_rng1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_2cx0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0g4kp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_wkopd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_qwgk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_b8evp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_xcwl6")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_ppcq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_b5q81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_6hsie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_4yc5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_nyq8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_pwvqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_mtrkh")
+}],
+"loop": 1,
+"name": &"move",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kl14"]
+atlas = ExtResource("38_cqq56")
+region = Rect2(0, 0, 48, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghkuk"]
+atlas = ExtResource("38_cqq56")
+region = Rect2(48, 0, 48, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qld3b"]
+atlas = ExtResource("38_cqq56")
+region = Rect2(96, 0, 48, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oejra"]
+atlas = ExtResource("38_cqq56")
+region = Rect2(144, 0, 48, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g88v0"]
+atlas = ExtResource("38_cqq56")
+region = Rect2(192, 0, 48, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6si5"]
+atlas = ExtResource("38_cqq56")
+region = Rect2(240, 0, 48, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxhms"]
+atlas = ExtResource("38_cqq56")
+region = Rect2(288, 0, 48, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8l3nj"]
+atlas = ExtResource("38_cqq56")
+region = Rect2(336, 0, 48, 56)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_13qdw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kl14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghkuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qld3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oejra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g88v0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6si5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxhms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8l3nj")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
 radius = 80.305664
 
-[node name="Enemy" type="CharacterBody2D" unique_id=1111966876 node_paths=PackedStringArray("_navigationAgent", "_scanArea", "_rayCast", "_patrolRoute")]
+[node name="Enemy" type="CharacterBody2D" unique_id=1111966876 node_paths=PackedStringArray("_navigationAgent", "_scanArea", "_rayCast", "_sprite", "_patrolRoute")]
 motion_mode = 1
-script = ExtResource("1_vcgqp")
+script = ExtResource("1_tg673")
 _navigationAgent = NodePath("NavigationAgent2D")
 _scanArea = NodePath("Area2D")
 _rayCast = NodePath("RayCast2D")
+_sprite = NodePath("AnimatedSprite")
 _patrolRoute = NodePath("PatrolRoute")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1874480557]
-debug_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=638544581]
 shape = SubResource("CircleShape2D_13qdw")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1949808870]
-self_modulate = Color(0.5370393, 0, 0.08217885, 1)
-scale = Vector2(0.078125, 0.078125)
-texture = ExtResource("2_5uv8i")
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=130322983]
+sprite_frames = SubResource("SpriteFrames_xrivr")
+animation = &"idle"
+
+[node name="Shadow" type="AnimatedSprite2D" parent="AnimatedSprite" unique_id=581160693]
+show_behind_parent = true
+sprite_frames = SubResource("SpriteFrames_13qdw")
+autoplay = "default"
+frame_progress = 0.31370673
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=470312640]
 target_position = Vector2(0, 81)

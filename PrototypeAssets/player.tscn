@@ -1,22 +1,18 @@
 [gd_scene format=3 uid="uid://cw3pypyg2mw5b"]
 
 [ext_resource type="Script" uid="uid://bqxnm47bfql6g" path="res://PrototypeAssets/PlayerTopDown.cs" id="1_5tp3y"]
-[ext_resource type="Texture2D" uid="uid://bml0vceiw6m2b" path="res://icon.svg" id="2_wldfh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
 radius = 9.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1654438660 node_paths=PackedStringArray("camera")]
+[node name="Player" type="CharacterBody2D" unique_id=1654438660 node_paths=PackedStringArray("sprite", "camera")]
 motion_mode = 1
 script = ExtResource("1_5tp3y")
+sprite = NodePath("")
 camera = NodePath("Camera2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=82994196]
 shape = SubResource("CircleShape2D_xrivr")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1004777525]
-scale = Vector2(0.109375, 0.109375)
-texture = ExtResource("2_wldfh")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1308071083]
 scale = Vector2(7.44, 7.44)

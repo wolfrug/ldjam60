@@ -1,3 +1,4 @@
+INCLUDE functions.ink
 /* Commands.
 #SET_POS:box_1
 #SET_BUBBLEPOS:face_1^chain_1 (for bubblechain intro, ignore otherwise)
@@ -8,11 +9,41 @@
 VAR isPlaying = false
 
 ==init
-Now let's change the text here and see what happens, practically speaking. It updates. All the time. #SET_SPRITEBACKGROUND:scene_main
+ #SET_SPRITEBACKGROUND:scene_main #SET_SPRITESUBTEXTURE:city
 
-Anyway.
+The year is 20XX. {B("box_1", 2, 5)} #PLAY_MUSIC:MusicCalm
 
-We wait a second.
+The [b]War[/b] between [b]Machines[/b] and [b]Men[/b] is[br]in the distant past... {B("box_2", 3, 1)}
+
+And as the [b]clouds of radiation[/b] have finally[br]started dissipating from the blasted cities... {B("box_3", 2, 1)}
+
+[b]Scavengers[/b] - like you - have begun[br]to loot the [b]OldTek[/b] hidden in the ruins. {B("box_4", 3, 1)}
+
+There is just one problem. #clear
+
+Sooo the ruin's full of robots.. {S(Deya, Neutral2)}
+
+So? Just don't get seen. {S(Zayne, Neutral1)}
+
+That's easy for you to say! {S(Deya, Angry)}
+
+You're not the one going in there! {S(Deya, Angry)}
+
+Relaaax. You're faster than they are. Just don't get stuck in a corner with one. {S(Zayne, Smile1)}
+
+Besides, they forget about you the moment they lose sight of you. So just hide. {S(Zayne, Smirk1)}
+
+Ugh. What are we looking for anyway? {S(Deya, Neutral1)}
+
+The old man gave us a list, but...I dunno what half of these things are. {S(Zayne, Sad)}
+
+Let me see that. {S(Deya, Angry)}
+
+...well. Shit. OldTek indeed. {S(Deya, Sad)}
+
+Let's just start looking. We'll make an educated guess once we have something. {S(Zayne, Smirk2)}
+
+Fine. But you better pull your weight! {S(Deya, Smirk1)}
 
 + [Start over]
 ->init
@@ -33,7 +64,7 @@ Wind wind!
 No wind.
 ->init
 + [Load level]
-Loading level 1. #LOAD_LEVEL:level_1 #clear
+Loading level 1. #LOAD_LEVEL:level_1 #clear #PLAY_MUSIC:MusicCombat
 ->DONE
 
 ==continuePlay
@@ -45,17 +76,14 @@ Hooray!
 ->init
 
 ==story_knot_test
-This is a story knot! WooooOOoo! #SET_CAMERA_TARGET:Default^1^0
+This is a story knot! WooooOOoo! #SET_CAMERA_TARGET:Default^1^0 #SET_SPRITESUBTEXTURE:ruin
 
 + [Rock on.]
 We rock on.
 + [WOOOO]
 Woo. #continue
 -
-#UNPAUSE_LEVEL #continue
+#UNPAUSE_LEVEL #continue #SET_SPRITESUBTEXTURE:ruin^false
 ->DONE
 
 
-===function SpeechBubble(target, bubblepos, chain)
-// Usage: {SpeechBubble(face_1, bubble_1, chain_1) OR leave chain_1 as "" for no chain
-{chain!="":#SET_BUBBLEPOS:{target}^{chain}|#SET_BUBBLEPOS:{target}} #SET_POS:{bubblepos}^true #SET_CUSTOM_LABEL:SpeechBubble_Talk

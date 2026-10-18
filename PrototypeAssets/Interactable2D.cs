@@ -82,6 +82,7 @@ public partial class Interactable2D : Area2D
                 if (_type == InteractableType.PICKUP)
                 {
                     Active = false;
+                    GlobalEvents.SendOnPlaySFX(new InkAudioEventArgs{audioPath = "Pickup"});
                 }
                 readyToInteract = false; // even if it can be interacted with again, force moving in/out
                 if (interactedWithFlag != null)

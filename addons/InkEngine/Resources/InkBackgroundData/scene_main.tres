@@ -1,23 +1,23 @@
-[gd_resource type="Resource" script_class="InkBackgroundData" format=3 uid="uid://bneb512d3dadq"]
+[gd_resource type="Resource" script_class="InkBackgroundData" format=3 uid="uid://kvfaqrdygwpe"]
 
 [ext_resource type="Texture2D" uid="uid://bslaxc7g3fvqv" path="res://PrototypeAssets/base_background.png" id="1_8ao7j"]
+[ext_resource type="PackedScene" uid="uid://u0xx6jdgihlj" path="res://scenes/city_scene.tscn" id="1_oulvg"]
 [ext_resource type="Script" uid="uid://ch2xw40skh2lx" path="res://addons/InkEngine/Scripts/DataTypes/InkBackgroundData.cs" id="1_swfue"]
+[ext_resource type="PackedScene" uid="uid://dehr5qsiby1hf" path="res://scenes/ruin.tscn" id="2_42i1j"]
 
 [resource]
 script = ExtResource("1_swfue")
 Texture = ExtResource("1_8ao7j")
+SubTextures = Dictionary[String, Resource]({
+"city": ExtResource("1_oulvg"),
+"ruin": ExtResource("2_42i1j")
+})
 POIs = Dictionary[String, Vector2]({
-"box_1": Vector2(1293, 149),
-"box_2": Vector2(1282, 292),
-"box_3": Vector2(1282, 466),
-"box_4": Vector2(1302, 700),
-"bubble_1": Vector2(374, 279),
-"bubble_2": Vector2(338, 468),
-"bubble_3": Vector2(314, 534),
-"face_1": Vector2(669, 301),
-"face_2": Vector2(704, 320),
-"p_bubble_1": Vector2(987, 710),
-"player": Vector2(692, 939)
+"box_0": Vector2(1176, 33),
+"box_1": Vector2(624, 43),
+"box_2": Vector2(764, 99),
+"box_3": Vector2(921, 155),
+"box_4": Vector2(1069, 202)
 })
 _ID = "scene_main"
 metadata/_custom_type_script = "uid://ch2xw40skh2lx"

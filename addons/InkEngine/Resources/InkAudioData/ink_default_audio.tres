@@ -4,17 +4,31 @@
 [ext_resource type="Script" uid="uid://c8qw77pfnjo57" path="res://addons/InkEngine/Scripts/DataTypes/InkAudioData.cs" id="1_lli14"]
 [ext_resource type="AudioStream" uid="uid://b1eg8kesr1wa7" path="res://addons/InkEngine/Audio/UI_Hoveron.wav" id="2_gkakn"]
 [ext_resource type="AudioStream" uid="uid://c66sor8fmxlsd" path="res://addons/InkEngine/Audio/UI_Continue.wav" id="3_gkakn"]
-[ext_resource type="AudioStream" uid="uid://1klo0vx7j4ui" path="res://addons/InkEngine/Audio/WillowGuardMusic.mp3" id="4_f4h6o"]
-[ext_resource type="AudioStream" uid="uid://e52hmb8ip1kl" path="res://addons/InkEngine/Audio/WillowGuardAmbience.mp3" id="5_fduog"]
+[ext_resource type="AudioStream" uid="uid://dja42jlxpq2y4" path="res://PrototypeAssets/Punch Deck - Iron and Granite MASTER.wav" id="4_oyiro"]
+[ext_resource type="AudioStream" uid="uid://bdy1ji0t4ha80" path="res://PrototypeAssets/Retro FootStep 03.wav" id="5_oyiro"]
+[ext_resource type="AudioStream" uid="uid://cw1q5hfritwop" path="res://PrototypeAssets/FreeSFX/FreeSFX/GameSFX/Impact/Retro Impact Punch Hurt 01.wav" id="6_pd5gu"]
+[ext_resource type="AudioStream" uid="uid://cnfafhvympq34" path="res://PrototypeAssets/FreeSFX/FreeSFX/GameSFX/Impact/Retro Impact Punch 07.wav" id="7_8fw7a"]
+[ext_resource type="AudioStream" uid="uid://brna3vjfdc8gv" path="res://PrototypeAssets/FreeSFX/FreeSFX/GameSFX/Alarms Blip Beeps/Retro Alarmed 06.wav" id="8_2mtc5"]
+[ext_resource type="AudioStream" uid="uid://c38rmteiygjm" path="res://PrototypeAssets/FreeSFX/FreeSFX/GameSFX/Events/Negative/Retro Negative Short 21.wav" id="9_cj7uy"]
+[ext_resource type="AudioStream" uid="uid://cd5pby7x4wfk5" path="res://PrototypeAssets/FreeSFX/FreeSFX/GameSFX/PickUp/Retro PickUp 18.wav" id="10_twyut"]
+[ext_resource type="AudioStream" uid="uid://dwumhb81h528k" path="res://PrototypeAssets/FreeSFX/FreeSFX/GameSFX/Ambience/Retro Ambience 02.wav" id="11_oyiro"]
+[ext_resource type="AudioStream" uid="uid://c8ue3ov1summv" path="res://PrototypeAssets/NotJam_CrashingOut.wav" id="12_pd5gu"]
 
 [resource]
 script = ExtResource("1_lli14")
 audioStreams = Dictionary[String, AudioStream]({
-"AmbienceWind": ExtResource("5_fduog"),
+"AmbienceRuin": ExtResource("11_oyiro"),
 "ButtonClick": ExtResource("1_k82gt"),
 "ButtonHover": ExtResource("2_gkakn"),
+"Death": ExtResource("9_cj7uy"),
+"Detected": ExtResource("8_2mtc5"),
+"Footstep": ExtResource("5_oyiro"),
+"Hurt": ExtResource("6_pd5gu"),
 "InkContinue": ExtResource("3_gkakn"),
-"MusicCalm": ExtResource("4_f4h6o")
+"MusicCalm": ExtResource("4_oyiro"),
+"MusicCombat": ExtResource("12_pd5gu"),
+"Pickup": ExtResource("10_twyut"),
+"PunchMiss": ExtResource("7_8fw7a")
 })
 _ID = "Default"
 metadata/_custom_type_script = "uid://c8qw77pfnjo57"

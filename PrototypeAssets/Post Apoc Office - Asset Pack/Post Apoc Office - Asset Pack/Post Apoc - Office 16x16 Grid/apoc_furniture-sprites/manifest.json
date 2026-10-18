@@ -1,0 +1,1784 @@
+{
+  "version": "0.1",
+  "source": {
+    "name": "Office_Furniture_16x16_Shadow.png",
+    "width": 560,
+    "height": 384
+  },
+  "settings": {
+    "prefix": "apoc_furniture",
+    "separator": "_",
+    "startNumber": 1,
+    "paddingLength": 2,
+    "format": "png",
+    "gameAssetProfile": "pixel-art",
+    "transparentPadding": 8,
+    "outputMode": "fixed",
+    "fixedWidth": 126,
+    "fixedHeight": 126,
+    "alignment": "bottom-center",
+    "background": "transparent",
+    "backgroundColor": "#f06a4d",
+    "engineTarget": "generic",
+    "atlasMode": "none",
+    "atlasMaxSize": 2048,
+    "atlasPadding": 2
+  },
+  "assets": [
+    {
+      "id": "region-1",
+      "filename": "apoc_furniture_01.png",
+      "order": 1,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 6,
+        "y": 1,
+        "width": 19,
+        "height": 14
+      }
+    },
+    {
+      "id": "region-2",
+      "filename": "apoc_furniture_02.png",
+      "order": 2,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 38,
+        "y": 1,
+        "width": 19,
+        "height": 14
+      }
+    },
+    {
+      "id": "region-3",
+      "filename": "apoc_furniture_03.png",
+      "order": 3,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 49,
+        "y": 31,
+        "width": 45,
+        "height": 64
+      }
+    },
+    {
+      "id": "region-4",
+      "filename": "apoc_furniture_04.png",
+      "order": 4,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 98,
+        "y": 31,
+        "width": 45,
+        "height": 64
+      }
+    },
+    {
+      "id": "region-5",
+      "filename": "apoc_furniture_05.png",
+      "order": 5,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 130,
+        "y": 1,
+        "width": 11,
+        "height": 14
+      }
+    },
+    {
+      "id": "region-6",
+      "filename": "apoc_furniture_06.png",
+      "order": 6,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 167,
+        "y": 7,
+        "width": 18,
+        "height": 19
+      }
+    },
+    {
+      "id": "region-7",
+      "filename": "apoc_furniture_07.png",
+      "order": 7,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 196,
+        "y": 1,
+        "width": 74,
+        "height": 62
+      }
+    },
+    {
+      "id": "region-8",
+      "filename": "apoc_furniture_08.png",
+      "order": 8,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 274,
+        "y": 1,
+        "width": 44,
+        "height": 62
+      }
+    },
+    {
+      "id": "region-9",
+      "filename": "apoc_furniture_09.png",
+      "order": 9,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 322,
+        "y": 1,
+        "width": 44,
+        "height": 62
+      }
+    },
+    {
+      "id": "region-10",
+      "filename": "apoc_furniture_10.png",
+      "order": 10,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 368,
+        "y": 1,
+        "width": 15,
+        "height": 74
+      }
+    },
+    {
+      "id": "region-11",
+      "filename": "apoc_furniture_11.png",
+      "order": 11,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 384,
+        "y": 7,
+        "width": 48,
+        "height": 41
+      }
+    },
+    {
+      "id": "region-12",
+      "filename": "apoc_furniture_12.png",
+      "order": 12,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 532,
+        "y": 5,
+        "width": 24,
+        "height": 51
+      }
+    },
+    {
+      "id": "region-13",
+      "filename": "apoc_furniture_13.png",
+      "order": 13,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 2,
+        "y": 32,
+        "width": 44,
+        "height": 59
+      }
+    },
+    {
+      "id": "region-14",
+      "filename": "apoc_furniture_14.png",
+      "order": 14,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 6,
+        "y": 17,
+        "width": 19,
+        "height": 14
+      }
+    },
+    {
+      "id": "region-15",
+      "filename": "apoc_furniture_15.png",
+      "order": 15,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 146,
+        "y": 32,
+        "width": 44,
+        "height": 62
+      }
+    },
+    {
+      "id": "region-16",
+      "filename": "apoc_furniture_16.png",
+      "order": 16,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 196,
+        "y": 17,
+        "width": 27,
+        "height": 74
+      }
+    },
+    {
+      "id": "region-17",
+      "filename": "apoc_furniture_17.png",
+      "order": 17,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 224,
+        "y": 65,
+        "width": 16,
+        "height": 63
+      }
+    },
+    {
+      "id": "region-18",
+      "filename": "apoc_furniture_18.png",
+      "order": 18,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 310,
+        "y": 65,
+        "width": 22,
+        "height": 47
+      }
+    },
+    {
+      "id": "region-19",
+      "filename": "apoc_furniture_19.png",
+      "order": 19,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 341,
+        "y": 65,
+        "width": 22,
+        "height": 47
+      }
+    },
+    {
+      "id": "region-20",
+      "filename": "apoc_furniture_20.png",
+      "order": 20,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 384,
+        "y": 54,
+        "width": 48,
+        "height": 40
+      }
+    },
+    {
+      "id": "region-21",
+      "filename": "apoc_furniture_21.png",
+      "order": 21,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 532,
+        "y": 69,
+        "width": 24,
+        "height": 51
+      }
+    },
+    {
+      "id": "region-22",
+      "filename": "apoc_furniture_22.png",
+      "order": 22,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 243,
+        "y": 71,
+        "width": 58,
+        "height": 39
+      }
+    },
+    {
+      "id": "region-23",
+      "filename": "apoc_furniture_23.png",
+      "order": 23,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 3,
+        "y": 103,
+        "width": 42,
+        "height": 40
+      }
+    },
+    {
+      "id": "region-24",
+      "filename": "apoc_furniture_24.png",
+      "order": 24,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 51,
+        "y": 103,
+        "width": 42,
+        "height": 40
+      }
+    },
+    {
+      "id": "region-25",
+      "filename": "apoc_furniture_25.png",
+      "order": 25,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 99,
+        "y": 103,
+        "width": 42,
+        "height": 40
+      }
+    },
+    {
+      "id": "region-26",
+      "filename": "apoc_furniture_26.png",
+      "order": 26,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 147,
+        "y": 103,
+        "width": 42,
+        "height": 40
+      }
+    },
+    {
+      "id": "region-27",
+      "filename": "apoc_furniture_27.png",
+      "order": 27,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 197,
+        "y": 98,
+        "width": 26,
+        "height": 72
+      }
+    },
+    {
+      "id": "region-28",
+      "filename": "apoc_furniture_28.png",
+      "order": 28,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 373,
+        "y": 99,
+        "width": 22,
+        "height": 61
+      }
+    },
+    {
+      "id": "region-29",
+      "filename": "apoc_furniture_29.png",
+      "order": 29,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 405,
+        "y": 99,
+        "width": 22,
+        "height": 61
+      }
+    },
+    {
+      "id": "region-30",
+      "filename": "apoc_furniture_30.png",
+      "order": 30,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 437,
+        "y": 99,
+        "width": 22,
+        "height": 61
+      }
+    },
+    {
+      "id": "region-31",
+      "filename": "apoc_furniture_31.png",
+      "order": 31,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 467,
+        "y": 99,
+        "width": 29,
+        "height": 61
+      }
+    },
+    {
+      "id": "region-32",
+      "filename": "apoc_furniture_32.png",
+      "order": 32,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 497,
+        "y": 96,
+        "width": 15,
+        "height": 63
+      }
+    },
+    {
+      "id": "region-33",
+      "filename": "apoc_furniture_33.png",
+      "order": 33,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 513,
+        "y": 105,
+        "width": 16,
+        "height": 39
+      }
+    },
+    {
+      "id": "region-34",
+      "filename": "apoc_furniture_34.png",
+      "order": 34,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 226,
+        "y": 129,
+        "width": 11,
+        "height": 15
+      }
+    },
+    {
+      "id": "region-35",
+      "filename": "apoc_furniture_35.png",
+      "order": 35,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 243,
+        "y": 119,
+        "width": 58,
+        "height": 40
+      }
+    },
+    {
+      "id": "region-36",
+      "filename": "apoc_furniture_36.png",
+      "order": 36,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 309,
+        "y": 113,
+        "width": 22,
+        "height": 53
+      }
+    },
+    {
+      "id": "region-37",
+      "filename": "apoc_furniture_37.png",
+      "order": 37,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 339,
+        "y": 113,
+        "width": 29,
+        "height": 47
+      }
+    },
+    {
+      "id": "region-38",
+      "filename": "apoc_furniture_38.png",
+      "order": 38,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 531,
+        "y": 126,
+        "width": 25,
+        "height": 33
+      }
+    },
+    {
+      "id": "region-39",
+      "filename": "apoc_furniture_39.png",
+      "order": 39,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 5,
+        "y": 152,
+        "width": 23,
+        "height": 35
+      }
+    },
+    {
+      "id": "region-40",
+      "filename": "apoc_furniture_40.png",
+      "order": 40,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 33,
+        "y": 146,
+        "width": 11,
+        "height": 29
+      }
+    },
+    {
+      "id": "region-41",
+      "filename": "apoc_furniture_41.png",
+      "order": 41,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 50,
+        "y": 140,
+        "width": 47,
+        "height": 45
+      }
+    },
+    {
+      "id": "region-42",
+      "filename": "apoc_furniture_42.png",
+      "order": 42,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 161,
+        "y": 304,
+        "width": 33,
+        "height": 51
+      }
+    },
+    {
+      "id": "region-43",
+      "filename": "apoc_furniture_43.png",
+      "order": 43,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 100,
+        "y": 143,
+        "width": 45,
+        "height": 48
+      }
+    },
+    {
+      "id": "region-44",
+      "filename": "apoc_furniture_44.png",
+      "order": 44,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 525,
+        "y": 192,
+        "width": 19,
+        "height": 15
+      }
+    },
+    {
+      "id": "region-45",
+      "filename": "apoc_furniture_45.png",
+      "order": 45,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 148,
+        "y": 152,
+        "width": 27,
+        "height": 35
+      }
+    },
+    {
+      "id": "region-46",
+      "filename": "apoc_furniture_46.png",
+      "order": 46,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 177,
+        "y": 146,
+        "width": 11,
+        "height": 29
+      }
+    },
+    {
+      "id": "region-47",
+      "filename": "apoc_furniture_47.png",
+      "order": 47,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 195,
+        "y": 160,
+        "width": 13,
+        "height": 31
+      }
+    },
+    {
+      "id": "region-48",
+      "filename": "apoc_furniture_48.png",
+      "order": 48,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 226,
+        "y": 145,
+        "width": 11,
+        "height": 15
+      }
+    },
+    {
+      "id": "region-49",
+      "filename": "apoc_furniture_49.png",
+      "order": 49,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 243,
+        "y": 161,
+        "width": 11,
+        "height": 15
+      }
+    },
+    {
+      "id": "region-50",
+      "filename": "apoc_furniture_50.png",
+      "order": 50,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 289,
+        "y": 161,
+        "width": 14,
+        "height": 15
+      }
+    },
+    {
+      "id": "region-51",
+      "filename": "apoc_furniture_51.png",
+      "order": 51,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 356,
+        "y": 161,
+        "width": 8,
+        "height": 14
+      }
+    },
+    {
+      "id": "region-52",
+      "filename": "apoc_furniture_52.png",
+      "order": 52,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 500,
+        "y": 160,
+        "width": 23,
+        "height": 46
+      }
+    },
+    {
+      "id": "region-53",
+      "filename": "apoc_furniture_53.png",
+      "order": 53,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 209,
+        "y": 171,
+        "width": 9,
+        "height": 21
+      }
+    },
+    {
+      "id": "region-54",
+      "filename": "apoc_furniture_54.png",
+      "order": 54,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 226,
+        "y": 178,
+        "width": 10,
+        "height": 13
+      }
+    },
+    {
+      "id": "region-55",
+      "filename": "apoc_furniture_55.png",
+      "order": 55,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 227,
+        "y": 163,
+        "width": 11,
+        "height": 12
+      }
+    },
+    {
+      "id": "region-56",
+      "filename": "apoc_furniture_56.png",
+      "order": 56,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 241,
+        "y": 177,
+        "width": 14,
+        "height": 15
+      }
+    },
+    {
+      "id": "region-57",
+      "filename": "apoc_furniture_57.png",
+      "order": 57,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 257,
+        "y": 162,
+        "width": 14,
+        "height": 13
+      }
+    },
+    {
+      "id": "region-58",
+      "filename": "apoc_furniture_58.png",
+      "order": 58,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 261,
+        "y": 177,
+        "width": 10,
+        "height": 8
+      }
+    },
+    {
+      "id": "region-59",
+      "filename": "apoc_furniture_59.png",
+      "order": 59,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 273,
+        "y": 163,
+        "width": 14,
+        "height": 19
+      }
+    },
+    {
+      "id": "region-60",
+      "filename": "apoc_furniture_60.png",
+      "order": 60,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 305,
+        "y": 170,
+        "width": 15,
+        "height": 20
+      }
+    },
+    {
+      "id": "region-61",
+      "filename": "apoc_furniture_61.png",
+      "order": 61,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 324,
+        "y": 162,
+        "width": 24,
+        "height": 25
+      }
+    },
+    {
+      "id": "region-62",
+      "filename": "apoc_furniture_62.png",
+      "order": 62,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 339,
+        "y": 178,
+        "width": 11,
+        "height": 12
+      }
+    },
+    {
+      "id": "region-63",
+      "filename": "apoc_furniture_63.png",
+      "order": 63,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 356,
+        "y": 177,
+        "width": 8,
+        "height": 14
+      }
+    },
+    {
+      "id": "region-64",
+      "filename": "apoc_furniture_64.png",
+      "order": 64,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 373,
+        "y": 163,
+        "width": 22,
+        "height": 61
+      }
+    },
+    {
+      "id": "region-65",
+      "filename": "apoc_furniture_65.png",
+      "order": 65,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 403,
+        "y": 163,
+        "width": 24,
+        "height": 74
+      }
+    },
+    {
+      "id": "region-66",
+      "filename": "apoc_furniture_66.png",
+      "order": 66,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 438,
+        "y": 163,
+        "width": 22,
+        "height": 61
+      }
+    },
+    {
+      "id": "region-67",
+      "filename": "apoc_furniture_67.png",
+      "order": 67,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 467,
+        "y": 163,
+        "width": 29,
+        "height": 62
+      }
+    },
+    {
+      "id": "region-68",
+      "filename": "apoc_furniture_68.png",
+      "order": 68,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 545,
+        "y": 176,
+        "width": 14,
+        "height": 15
+      }
+    },
+    {
+      "id": "region-69",
+      "filename": "apoc_furniture_69.png",
+      "order": 69,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 6,
+        "y": 195,
+        "width": 23,
+        "height": 43
+      }
+    },
+    {
+      "id": "region-70",
+      "filename": "apoc_furniture_70.png",
+      "order": 70,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 35,
+        "y": 193,
+        "width": 52,
+        "height": 47
+      }
+    },
+    {
+      "id": "region-71",
+      "filename": "apoc_furniture_71.png",
+      "order": 71,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 67,
+        "y": 193,
+        "width": 11,
+        "height": 29
+      }
+    },
+    {
+      "id": "region-72",
+      "filename": "apoc_furniture_72.png",
+      "order": 72,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 100,
+        "y": 195,
+        "width": 39,
+        "height": 43
+      }
+    },
+    {
+      "id": "region-73",
+      "filename": "apoc_furniture_73.png",
+      "order": 73,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 292,
+        "y": 180,
+        "width": 11,
+        "height": 12
+      }
+    },
+    {
+      "id": "region-74",
+      "filename": "apoc_furniture_74.png",
+      "order": 74,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 311,
+        "y": 192,
+        "width": 18,
+        "height": 31
+      }
+    },
+    {
+      "id": "region-75",
+      "filename": "apoc_furniture_75.png",
+      "order": 75,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 81,
+        "y": 204,
+        "width": 26,
+        "height": 33
+      }
+    },
+    {
+      "id": "region-76",
+      "filename": "apoc_furniture_76.png",
+      "order": 76,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 149,
+        "y": 202,
+        "width": 22,
+        "height": 36
+      }
+    },
+    {
+      "id": "region-77",
+      "filename": "apoc_furniture_77.png",
+      "order": 77,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 182,
+        "y": 198,
+        "width": 18,
+        "height": 40
+      }
+    },
+    {
+      "id": "region-78",
+      "filename": "apoc_furniture_78.png",
+      "order": 78,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 216,
+        "y": 198,
+        "width": 18,
+        "height": 40
+      }
+    },
+    {
+      "id": "region-79",
+      "filename": "apoc_furniture_79.png",
+      "order": 79,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 247,
+        "y": 199,
+        "width": 18,
+        "height": 38
+      }
+    },
+    {
+      "id": "region-80",
+      "filename": "apoc_furniture_80.png",
+      "order": 80,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 272,
+        "y": 203,
+        "width": 32,
+        "height": 35
+      }
+    },
+    {
+      "id": "region-81",
+      "filename": "apoc_furniture_81.png",
+      "order": 81,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 336,
+        "y": 199,
+        "width": 15,
+        "height": 20
+      }
+    },
+    {
+      "id": "region-82",
+      "filename": "apoc_furniture_82.png",
+      "order": 82,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 352,
+        "y": 199,
+        "width": 15,
+        "height": 20
+      }
+    },
+    {
+      "id": "region-83",
+      "filename": "apoc_furniture_83.png",
+      "order": 83,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 512,
+        "y": 204,
+        "width": 48,
+        "height": 20
+      }
+    },
+    {
+      "id": "region-84",
+      "filename": "apoc_furniture_84.png",
+      "order": 84,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 35,
+        "y": 241,
+        "width": 58,
+        "height": 29
+      }
+    },
+    {
+      "id": "region-85",
+      "filename": "apoc_furniture_85.png",
+      "order": 85,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 96,
+        "y": 240,
+        "width": 32,
+        "height": 61
+      }
+    },
+    {
+      "id": "region-86",
+      "filename": "apoc_furniture_86.png",
+      "order": 86,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 130,
+        "y": 241,
+        "width": 44,
+        "height": 60
+      }
+    },
+    {
+      "id": "region-87",
+      "filename": "apoc_furniture_87.png",
+      "order": 87,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 175,
+        "y": 239,
+        "width": 48,
+        "height": 65
+      }
+    },
+    {
+      "id": "region-88",
+      "filename": "apoc_furniture_88.png",
+      "order": 88,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 226,
+        "y": 241,
+        "width": 47,
+        "height": 63
+      }
+    },
+    {
+      "id": "region-89",
+      "filename": "apoc_furniture_89.png",
+      "order": 89,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 324,
+        "y": 228,
+        "width": 27,
+        "height": 75
+      }
+    },
+    {
+      "id": "region-90",
+      "filename": "apoc_furniture_90.png",
+      "order": 90,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 352,
+        "y": 232,
+        "width": 15,
+        "height": 20
+      }
+    },
+    {
+      "id": "region-91",
+      "filename": "apoc_furniture_91.png",
+      "order": 91,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 372,
+        "y": 230,
+        "width": 23,
+        "height": 24
+      }
+    },
+    {
+      "id": "region-92",
+      "filename": "apoc_furniture_92.png",
+      "order": 92,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 418,
+        "y": 225,
+        "width": 60,
+        "height": 62
+      }
+    },
+    {
+      "id": "region-93",
+      "filename": "apoc_furniture_93.png",
+      "order": 93,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 482,
+        "y": 225,
+        "width": 60,
+        "height": 62
+      }
+    },
+    {
+      "id": "region-94",
+      "filename": "apoc_furniture_94.png",
+      "order": 94,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 544,
+        "y": 227,
+        "width": 16,
+        "height": 27
+      }
+    },
+    {
+      "id": "region-95",
+      "filename": "apoc_furniture_95.png",
+      "order": 95,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 5,
+        "y": 250,
+        "width": 22,
+        "height": 36
+      }
+    },
+    {
+      "id": "region-96",
+      "filename": "apoc_furniture_96.png",
+      "order": 96,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 274,
+        "y": 242,
+        "width": 44,
+        "height": 60
+      }
+    },
+    {
+      "id": "region-97",
+      "filename": "apoc_furniture_97.png",
+      "order": 97,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 358,
+        "y": 272,
+        "width": 18,
+        "height": 31
+      }
+    },
+    {
+      "id": "region-98",
+      "filename": "apoc_furniture_98.png",
+      "order": 98,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 391,
+        "y": 261,
+        "width": 18,
+        "height": 53
+      }
+    },
+    {
+      "id": "region-99",
+      "filename": "apoc_furniture_99.png",
+      "order": 99,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 480,
+        "y": 275,
+        "width": 32,
+        "height": 27
+      }
+    },
+    {
+      "id": "region-100",
+      "filename": "apoc_furniture_100.png",
+      "order": 100,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 544,
+        "y": 259,
+        "width": 16,
+        "height": 27
+      }
+    },
+    {
+      "id": "region-101",
+      "filename": "apoc_furniture_101.png",
+      "order": 101,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 5,
+        "y": 289,
+        "width": 22,
+        "height": 29
+      }
+    },
+    {
+      "id": "region-102",
+      "filename": "apoc_furniture_102.png",
+      "order": 102,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 35,
+        "y": 282,
+        "width": 58,
+        "height": 36
+      }
+    },
+    {
+      "id": "region-103",
+      "filename": "apoc_furniture_103.png",
+      "order": 103,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 423,
+        "y": 277,
+        "width": 18,
+        "height": 53
+      }
+    },
+    {
+      "id": "region-104",
+      "filename": "apoc_furniture_104.png",
+      "order": 104,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 482,
+        "y": 289,
+        "width": 60,
+        "height": 62
+      }
+    },
+    {
+      "id": "region-105",
+      "filename": "apoc_furniture_105.png",
+      "order": 105,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 96,
+        "y": 313,
+        "width": 16,
+        "height": 38
+      }
+    },
+    {
+      "id": "region-106",
+      "filename": "apoc_furniture_106.png",
+      "order": 106,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 130,
+        "y": 304,
+        "width": 28,
+        "height": 46
+      }
+    },
+    {
+      "id": "region-107",
+      "filename": "apoc_furniture_107.png",
+      "order": 107,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 256,
+        "y": 304,
+        "width": 41,
+        "height": 48
+      }
+    },
+    {
+      "id": "region-108",
+      "filename": "apoc_furniture_108.png",
+      "order": 108,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 311,
+        "y": 310,
+        "width": 18,
+        "height": 38
+      }
+    },
+    {
+      "id": "region-109",
+      "filename": "apoc_furniture_109.png",
+      "order": 109,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 415,
+        "y": 336,
+        "width": 33,
+        "height": 45
+      }
+    },
+    {
+      "id": "region-110",
+      "filename": "apoc_furniture_110.png",
+      "order": 110,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 5,
+        "y": 323,
+        "width": 38,
+        "height": 27
+      }
+    },
+    {
+      "id": "region-111",
+      "filename": "apoc_furniture_111.png",
+      "order": 111,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 55,
+        "y": 323,
+        "width": 18,
+        "height": 23
+      }
+    },
+    {
+      "id": "region-112",
+      "filename": "apoc_furniture_112.png",
+      "order": 112,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 336,
+        "y": 315,
+        "width": 17,
+        "height": 36
+      }
+    },
+    {
+      "id": "region-113",
+      "filename": "apoc_furniture_113.png",
+      "order": 113,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 391,
+        "y": 326,
+        "width": 18,
+        "height": 53
+      }
+    },
+    {
+      "id": "region-114",
+      "filename": "apoc_furniture_114.png",
+      "order": 114,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 352,
+        "y": 315,
+        "width": 21,
+        "height": 35
+      }
+    },
+    {
+      "id": "region-115",
+      "filename": "apoc_furniture_115.png",
+      "order": 115,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 87,
+        "y": 355,
+        "width": 17,
+        "height": 28
+      }
+    },
+    {
+      "id": "region-116",
+      "filename": "apoc_furniture_116.png",
+      "order": 116,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 112,
+        "y": 356,
+        "width": 16,
+        "height": 27
+      }
+    },
+    {
+      "id": "region-117",
+      "filename": "apoc_furniture_117.png",
+      "order": 117,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 131,
+        "y": 357,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "id": "region-118",
+      "filename": "apoc_furniture_118.png",
+      "order": 118,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 165,
+        "y": 358,
+        "width": 22,
+        "height": 23
+      }
+    },
+    {
+      "id": "region-119",
+      "filename": "apoc_furniture_119.png",
+      "order": 119,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 192,
+        "y": 356,
+        "width": 33,
+        "height": 25
+      }
+    },
+    {
+      "id": "region-120",
+      "filename": "apoc_furniture_120.png",
+      "order": 120,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 290,
+        "y": 354,
+        "width": 28,
+        "height": 24
+      }
+    },
+    {
+      "id": "region-121",
+      "filename": "apoc_furniture_121.png",
+      "order": 121,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 322,
+        "y": 354,
+        "width": 28,
+        "height": 30
+      }
+    },
+    {
+      "id": "region-122",
+      "filename": "apoc_furniture_122.png",
+      "order": 122,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 354,
+        "y": 354,
+        "width": 28,
+        "height": 30
+      }
+    },
+    {
+      "id": "region-123",
+      "filename": "apoc_furniture_123.png",
+      "order": 123,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 482,
+        "y": 353,
+        "width": 44,
+        "height": 30
+      }
+    },
+    {
+      "id": "manual-1792309489444",
+      "filename": "apoc_furniture_124.png",
+      "order": 124,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 448,
+        "y": 336,
+        "width": 34,
+        "height": 47
+      }
+    },
+    {
+      "id": "manual-1792309547720",
+      "filename": "apoc_furniture_125.png",
+      "order": 125,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 446,
+        "y": 294,
+        "width": 34,
+        "height": 41
+      }
+    },
+    {
+      "id": "manual-1792309701939",
+      "filename": "apoc_furniture_126.png",
+      "order": 126,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 432,
+        "y": 5,
+        "width": 48,
+        "height": 44
+      }
+    },
+    {
+      "id": "manual-1792309747838",
+      "filename": "apoc_furniture_127.png",
+      "order": 127,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 480,
+        "y": 6,
+        "width": 51,
+        "height": 42
+      }
+    },
+    {
+      "id": "manual-1792310025949",
+      "filename": "apoc_furniture_128.png",
+      "order": 128,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 193,
+        "y": 304,
+        "width": 32,
+        "height": 50
+      }
+    },
+    {
+      "id": "manual-1792310068590",
+      "filename": "apoc_furniture_129.png",
+      "order": 129,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 226,
+        "y": 304,
+        "width": 30,
+        "height": 51
+      }
+    },
+    {
+      "id": "manual-1792310142986",
+      "filename": "apoc_furniture_130.png",
+      "order": 130,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 526,
+        "y": 160,
+        "width": 19,
+        "height": 32
+      }
+    },
+    {
+      "id": "manual-1792310276710",
+      "filename": "apoc_furniture_131.png",
+      "order": 131,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 432,
+        "y": 54,
+        "width": 48,
+        "height": 42
+      }
+    },
+    {
+      "id": "manual-1792310303770",
+      "filename": "apoc_furniture_132.png",
+      "order": 132,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 480,
+        "y": 54,
+        "width": 49,
+        "height": 42
+      }
+    },
+    {
+      "id": "manual-1792310345530",
+      "filename": "apoc_furniture_133.png",
+      "order": 133,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 224,
+        "y": 356,
+        "width": 32,
+        "height": 25
+      }
+    },
+    {
+      "id": "manual-1792310390700",
+      "filename": "apoc_furniture_134.png",
+      "order": 134,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 257,
+        "y": 358,
+        "width": 30,
+        "height": 22
+      }
+    },
+    {
+      "id": "manual-1792310429087",
+      "filename": "apoc_furniture_135.png",
+      "order": 135,
+      "width": 126,
+      "height": 126,
+      "sourceRegion": {
+        "x": 112,
+        "y": 315,
+        "width": 18,
+        "height": 35
+      }
+    }
+  ]
+}

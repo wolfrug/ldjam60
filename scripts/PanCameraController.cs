@@ -123,12 +123,17 @@ public partial class PanCameraController : Camera2D
     private Tween _forcePanTween;
     private float _targetZoom;
 
+    private bool _defaultPanningOn;
+    private bool _defaultZoomOn;
+
     public override void _Ready()
     {
         _center = TargetSprite != null ? TargetSprite.GlobalPosition : GlobalPosition;
         RecalculateBounds();
         _targetZoom = Zoom.X;
         TargetSprite.TextureChanged += RecalculateBounds;
+        _defaultPanningOn = PanningEnabled;
+        _defaultZoomOn = ZoomEnabled;
     }
 
     // Call this again at runtime if you swap TargetSprite's texture,
@@ -428,11 +433,12 @@ public partial class PanCameraController : Camera2D
 
     public void SetControlsOn()
     {
-        SetPanningEnabled(true);
-        SetZoom(Zoom.X, true);
-        ZoomEnabled = true;
+        SetZoom(Zoom.X, false);
+        PanTo(Position, false);
+        SetPanningEnabled(_defaultPanningOn);
+        ZoomEnabled = _defaultZoomOn;
     }
-      public void SetControlsOff()
+    public void SetControlsOff()
     {
         SetPanningEnabled(false);
         ZoomEnabled = false;

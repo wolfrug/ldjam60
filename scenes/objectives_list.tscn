@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://b8t3d22ixp1u3"]
+
+[ext_resource type="Script" uid="uid://dbqrww8msjaf1" path="res://addons/InkEngine/Scripts/InkUI.cs" id="1_l2awu"]
+[ext_resource type="Script" uid="uid://coh24nstjnosq" path="res://addons/InkEngine/Scripts/InkLabel.cs" id="2_edok8"]
+[ext_resource type="Theme" uid="uid://dp7p64i6xy7hr" path="res://addons/InkEngine/UI/dialogbox_theme.tres" id="3_t8tlf"]
+[ext_resource type="FontFile" uid="uid://dltv4busrb83q" path="res://fonts/ShadowsIntoLight-Regular.ttf" id="4_mkprq"]
+
+[sub_resource type="Theme" id="Theme_8f1fl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
+bg_color = Color(0.6134126, 0.5287752, 0.20693955, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+corner_detail = 11
+shadow_size = 3
+shadow_offset = Vector2(8.19, 9.54)
+
+[node name="ObjectivesList" type="Node2D" unique_id=1364791821]
+
+[node name="Panel" type="CanvasLayer" parent="." unique_id=904494866 node_paths=PackedStringArray("customLabels")]
+script = ExtResource("1_l2awu")
+customLabels = {
+"List": NodePath("AspectRatioContainer/InkLabel")
+}
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Panel" unique_id=2130849648]
+offset_right = 188.0
+offset_bottom = 302.0
+ratio = 0.6491
+stretch_mode = 0
+
+[node name="InkLabel" type="BoxContainer" parent="Panel/AspectRatioContainer" unique_id=648605235 node_paths=PackedStringArray("textLabel", "container")]
+layout_mode = 2
+size_flags_horizontal = 3
+vertical = true
+script = ExtResource("2_edok8")
+textLabel = NodePath("Panel/MarginContainer/RichTextLabel")
+container = NodePath("Panel")
+
+[node name="Panel" type="PanelContainer" parent="Panel/AspectRatioContainer/InkLabel" unique_id=1889959205]
+z_as_relative = false
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_8f1fl")
+theme_override_styles/panel = SubResource("StyleBoxFlat_xrivr")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/AspectRatioContainer/InkLabel/Panel" unique_id=837264908]
+layout_mode = 2
+theme_override_constants/margin_left = 9
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/AspectRatioContainer/InkLabel/Panel/MarginContainer" unique_id=691433562]
+layout_mode = 2
+theme = ExtResource("3_t8tlf")
+theme_override_fonts/normal_font = ExtResource("4_mkprq")
+bbcode_enabled = true
+text = "To do list.
+
+"
+fit_content = true

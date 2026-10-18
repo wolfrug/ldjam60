@@ -1,9 +1,7 @@
 using Godot;
 using System;
 using Godot.Collections;
-using Ink.Parsed;
-using System.Diagnostics.Tracing;
-using System.Linq;
+using System.Threading.Tasks;
 
 public partial class GameManager : Node
 {
@@ -25,6 +23,7 @@ public partial class GameManager : Node
         GlobalEvents.OnRequestLoadLevel += GlobalEvent_OnRequestLevelLoaded;
         GlobalEvents.OnInteracted += GlobalEvent_OnInteracted;
         GlobalEvents.OnTagsFound += GlobalEvent_OnTagsFound;
+        GlobalEvents.OnDamaged += GlobalEvent_OnDamaged;
     }
     public override void _ExitTree()
     {
@@ -32,6 +31,7 @@ public partial class GameManager : Node
         GlobalEvents.OnRequestLoadLevel -= GlobalEvent_OnRequestLevelLoaded;
         GlobalEvents.OnInteracted -= GlobalEvent_OnInteracted;
         GlobalEvents.OnTagsFound -= GlobalEvent_OnTagsFound;
+        GlobalEvents.OnDamaged -= GlobalEvent_OnDamaged;
     }
 
     public void GlobalEvent_OnTagsFound(InkEventArgs args)
@@ -62,6 +62,7 @@ public partial class GameManager : Node
             storyBackground.ProcessMode = ProcessModeEnum.Inherit;
             Inkwriter.instance.Active = true;
             Inkwriter.instance.Play(args.ID);
+            _currentLoadedLevel = null;
         }
         if (args.type == InteractableType.STORY && !Inkwriter.instance.Active)
         {
@@ -81,12 +82,29 @@ public partial class GameManager : Node
             {
                 LevelManager level = scene.Instantiate<LevelManager>();
                 AddChild(level);
+                level._ID = args.levelID;
                 _currentLoadedLevel = level;
                 storyBackground.Visible = false;
                 storyBackground.ProcessMode = ProcessModeEnum.Disabled;
                 Inkwriter.instance.Active = false;
             }
         }
+    }
+    public void GlobalEvent_OnDamaged(AgentEventArgs args)
+    {
+        if (args.player != null && args.healthLeft <= 0)
+        {
+            // Player died!
+            ResetCurrentLevelWithDelay();
+        }
+    }
+    public async void ResetCurrentLevelWithDelay(double delay = 2000)
+    {
+        await Task.Delay(TimeSpan.FromMilliseconds(delay));
+        string currentlevelID = _currentLoadedLevel._ID;
+        _currentLoadedLevel.QueueFree();
+        _currentLoadedLevel = null;
+        GlobalEvents.SendOnRequestLoadLevel(new LevelEventArgs { levelID = currentlevelID });
     }
 
 }

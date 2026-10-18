@@ -4,10 +4,11 @@ using Godot.Collections;
 
 public partial class BaseNavigationAgent2D : CharacterBody2D
 {
-    [Export] private NavigationAgent2D _navigationAgent;
+    [Export] protected NavigationAgent2D _navigationAgent;
     [Export] public Node2D _navigationTarget;
     [Export] public Area2D _scanArea;
     [Export] public RayCast2D _rayCast;
+    [Export] public AnimatedSprite2D _sprite;
 
     [Export] public Polygon2D _patrolRoute;
     protected Array<Vector2> _patrolRoutePoints = new();
@@ -99,11 +100,32 @@ public partial class BaseNavigationAgent2D : CharacterBody2D
             Velocity = currentAgentPosition.DirectionTo(nextPathPosition) * _movementSpeed;
             MoveAndSlide();
             ActorSetup();
+            PlayAnimation();
         }
     }
-    protected virtual void HandleScannedBodies()
+    protected virtual async void HandleScannedBodies()
     {
 
+    }
+    protected virtual void PlayAnimation()
+    {
+        if (Velocity == Vector2.Zero)
+        {
+            _sprite.Play("idle");
+            return;
+        }
+        if (Velocity > Vector2.Zero)
+        {
+            _sprite.Play("move");
+        }
+        if (Velocity.X > 0)
+        {
+            _sprite.FlipH = true;
+        }
+        else
+        {
+            _sprite.FlipH = false;
+        }
     }
     protected async void HandlePatrol()
     {
@@ -124,11 +146,11 @@ public partial class BaseNavigationAgent2D : CharacterBody2D
             }
             _currentPatrolPoint = closestPoint;
             _isPatrolling = true;
-            GD.Print("Found closest patrol point: " + closestPoint);
+            //GD.Print("Found closest patrol point: " + closestPoint);
         }
         else
         {
-            GD.Print("Patrolling to point " + _currentPatrolPoint);
+            //GD.Print("Patrolling to point " + _currentPatrolPoint);
             _movementTargetPosition = _patrolRoutePoints[_currentPatrolPoint];
             await ToSignal(GetTree(), SceneTree.SignalName.PhysicsFrame);
             if (_navigationAgent.IsNavigationFinished())

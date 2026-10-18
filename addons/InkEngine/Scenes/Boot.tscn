@@ -2,21 +2,29 @@
 
 [ext_resource type="Script" uid="uid://bmevkp0oxvmmy" path="res://addons/InkEngine/Scripts/Boot.cs" id="1_heg12"]
 [ext_resource type="Theme" uid="uid://bwcic61yqp7ch" path="res://addons/InkEngine/UI/optionbox_theme.tres" id="4_o4iyv"]
-[ext_resource type="AudioStream" uid="uid://1klo0vx7j4ui" path="res://addons/InkEngine/Audio/WillowGuardMusic.mp3" id="5_lix63"]
 [ext_resource type="Texture2D" uid="uid://cwxh827trv8qh" path="res://PrototypeAssets/Background_LittleSmithItchIo/1.png" id="5_yq8bu"]
 [ext_resource type="Texture2D" uid="uid://b3p8d8nsjnub1" path="res://PrototypeAssets/Background_LittleSmithItchIo/2.png" id="6_bh8sn"]
 [ext_resource type="Texture2D" uid="uid://v8hm0qg7psrj" path="res://PrototypeAssets/Background_LittleSmithItchIo/3.png" id="7_yfna8"]
 [ext_resource type="Texture2D" uid="uid://foamn73i04mv" path="res://PrototypeAssets/Background_LittleSmithItchIo/4.png" id="8_07jrm"]
 [ext_resource type="Texture2D" uid="uid://bht0cboxq5ccq" path="res://PrototypeAssets/Background_LittleSmithItchIo/5.png" id="9_tl63h"]
 [ext_resource type="Script" uid="uid://cppej883pf1fl" path="res://scripts/PanCameraController.cs" id="10_8hi5h"]
-[ext_resource type="FontFile" uid="uid://8g5p70wh2or4" path="res://fonts/komika/KOMIKAH_.ttf" id="10_bh8sn"]
+[ext_resource type="FontFile" uid="uid://588wcojwnfvw" path="res://fonts/RubikIso-Regular.ttf" id="10_bh8sn"]
 [ext_resource type="Texture2D" uid="uid://bslaxc7g3fvqv" path="res://PrototypeAssets/base_background.png" id="11_bh8sn"]
+[ext_resource type="AudioStream" uid="uid://dja42jlxpq2y4" path="res://PrototypeAssets/Punch Deck - Iron and Granite MASTER.wav" id="11_yfna8"]
+[ext_resource type="StyleBox" uid="uid://cx04ltbfvlvxs" path="res://addons/InkEngine/UI/dialog_label_box.tres" id="12_07jrm"]
+[ext_resource type="StyleBox" uid="uid://c7v8e3fh6ggc4" path="res://addons/InkEngine/UI/button_normal.tres" id="13_8hi5h"]
+[ext_resource type="FontFile" uid="uid://8g5p70wh2or4" path="res://fonts/komika/KOMIKAH_.ttf" id="13_tl63h"]
+[ext_resource type="StyleBox" uid="uid://u3tivqq8xn0j" path="res://addons/InkEngine/UI/button_hover.tres" id="14_rudih"]
+[ext_resource type="StyleBox" uid="uid://bfest7al3ay74" path="res://addons/InkEngine/UI/optionbox_default.tres" id="15_rudih"]
 
 [sub_resource type="Gradient" id="Gradient_bh8sn"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_yfna8"]
 gradient = SubResource("Gradient_bh8sn")
+
+[sub_resource type="Theme" id="Theme_xrivr"]
+Panel/styles/panel = ExtResource("12_07jrm")
 
 [node name="Boot" type="CanvasLayer" unique_id=1015788684 node_paths=PackedStringArray("_startButton", "_quitButton")]
 script = ExtResource("1_heg12")
@@ -39,6 +47,9 @@ show_behind_parent = true
 position = Vector2(580, 321)
 script = ExtResource("10_8hi5h")
 TargetSprite = NodePath("../Sprite2D")
+MaxPanSpeed = Vector2(50, 50)
+AllowMouseDrag = false
+AllowTouchDrag = false
 EdgePanSpeed = Vector2(50, 50)
 EdgePanStartMarginPercent = 0.5
 PauseWhenOverUI = false
@@ -136,17 +147,185 @@ layout_mode = 2
 text = "Quit Game"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=847090164]
+self_modulate = Color(0, 14.666419, 11.426685, 1)
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 120.0
 grow_horizontal = 2
 theme_override_fonts/normal_font = ExtResource("10_bh8sn")
 theme_override_font_sizes/normal_font_size = 70
-text = "Deadline"
+text = "OldTek Scavenger"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=214019036]
-stream = ExtResource("5_lix63")
+stream = ExtResource("11_yfna8")
 autoplay = true
-parameters/looping = true
+
+[node name="Credits" type="FoldableContainer" parent="." unique_id=357076776]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -14.0
+offset_bottom = 204.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/hover_font_color = Color(0, 0, 0, 1)
+theme_override_colors/collapsed_font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_tl63h")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/title_panel = ExtResource("13_8hi5h")
+theme_override_styles/title_hover_panel = ExtResource("14_rudih")
+theme_override_styles/title_collapsed_panel = ExtResource("13_8hi5h")
+theme_override_styles/title_collapsed_hover_panel = ExtResource("14_rudih")
+theme_override_styles/focus = ExtResource("14_rudih")
+theme_override_styles/panel = ExtResource("15_rudih")
+folded = true
+title = "Credits"
+
+[node name="Panel" type="Panel" parent="Credits" unique_id=828921601]
+visible = false
+propagate_maximum_size = true
+layout_mode = 2
+theme = SubResource("Theme_xrivr")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Credits/Panel" unique_id=1509025832]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits/Panel/ScrollContainer" unique_id=1741182105]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("13_tl63h")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "[center]Credits[/center]
+Design, Text: Petter Skult
+
+Art:
+Post-apocalypse Background by LittleSmith: https://littlesmith.itch.io/post-apocalyptic-background
+
+Character sprite by Sscary: https://sscary.itch.io/the-adventurer-female
+
+Post-apoc office by 0_mem0ry: https://0-mem0ry.itch.io/post-apoc-office-mega-bundle-free
+
+Metal Monster by Heirey: https://heirey.itch.io/metal-monster
+
+Character portraits by IF-THEN-ELSE: https://ifthenelse-interactive.itch.io/
+
+Retro Tech Icon Pack by Crumbus McFungus: https://crumbusmcfungus.itch.io/retro-tech-icon-pack
+
+Audio:
+
+Free SFX by kronbits: https://kronbits.itch.io/freesfx
+
+Iron and Granite by Punch Deck: https://soundcloud.com/punch-deck/iron-and-granite
+
+Critical Theme by Not Jam: https://not-jam.itch.io/not-jam-music-pack
+
+Made with Ink.
+
+Fonts: KOMIKA by WolfBainX & Apostrophic Labs (www.apsotrophiclab.com)
+
+Rubik Iso (Copyright 2020 The Rubik Filtered Project Authors (https://https://github.com/NaN-xyz/Rubik-Filtered)
+
+For Ludum dare 60 with the theme \"Old Tech\"
+"
+selection_enabled = true
+
+[node name="Credits2" type="FoldableContainer" parent="." unique_id=686158284]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -14.0
+offset_bottom = 204.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/hover_font_color = Color(0, 0, 0, 1)
+theme_override_colors/collapsed_font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_tl63h")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/title_panel = ExtResource("13_8hi5h")
+theme_override_styles/title_hover_panel = ExtResource("14_rudih")
+theme_override_styles/title_collapsed_panel = ExtResource("13_8hi5h")
+theme_override_styles/title_collapsed_hover_panel = ExtResource("14_rudih")
+theme_override_styles/focus = ExtResource("14_rudih")
+theme_override_styles/panel = ExtResource("15_rudih")
+folded = true
+title = "Credits"
+
+[node name="Panel" type="Panel" parent="Credits2" unique_id=1742181382]
+visible = false
+propagate_maximum_size = true
+layout_mode = 2
+theme = SubResource("Theme_xrivr")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Credits2/Panel" unique_id=130856129]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits2/Panel/ScrollContainer" unique_id=1682384795]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("13_tl63h")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "[center]Credits[/center]
+Design, Text: Petter Skult
+
+Art:
+Post-apocalypse Background by LittleSmith: https://littlesmith.itch.io/post-apocalyptic-background
+
+Character sprite by Sscary: https://sscary.itch.io/the-adventurer-female
+
+Post-apoc office by 0_mem0ry: https://0-mem0ry.itch.io/post-apoc-office-mega-bundle-free
+
+Metal Monster by Heirey: https://heirey.itch.io/metal-monster
+
+Character portraits by IF-THEN-ELSE: https://ifthenelse-interactive.itch.io/
+
+Retro Tech Icon Pack by Crumbus McFungus: https://crumbusmcfungus.itch.io/retro-tech-icon-pack
+
+Audio:
+
+Free SFX by kronbits: https://kronbits.itch.io/freesfx
+
+Iron and Granite by Punch Deck: https://soundcloud.com/punch-deck/iron-and-granite
+
+Critical Theme by Not Jam: https://not-jam.itch.io/not-jam-music-pack
+
+Made with Ink.
+
+Fonts: KOMIKA by WolfBainX & Apostrophic Labs (www.apsotrophiclab.com)
+
+Rubik Iso (Copyright 2020 The Rubik Filtered Project Authors (https://https://github.com/NaN-xyz/Rubik-Filtered)
+
+For Ludum dare 60 with the theme \"Old Tech\"
+"
+selection_enabled = true
