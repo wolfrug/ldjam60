@@ -1,21 +1,39 @@
 [gd_scene format=4 uid="uid://dvthasmh02jd4"]
 
-[ext_resource type="PackedScene" uid="uid://cw3pypyg2mw5b" path="res://PrototypeAssets/player.tscn" id="2_3i8j8"]
+[ext_resource type="Script" uid="uid://bqxnm47bfql6g" path="res://PrototypeAssets/PlayerTopDown.cs" id="1_lxxgl"]
 [ext_resource type="TileSet" uid="uid://1l5ili6gthnd" path="res://PrototypeAssets/default_tileset.tres" id="3_lxxgl"]
 [ext_resource type="TileSet" uid="uid://7m2bcmbs4tjm" path="res://PrototypeAssets/office_terrain_tileset.tres" id="3_yvhea"]
 [ext_resource type="Texture2D" uid="uid://bml0vceiw6m2b" path="res://icon.svg" id="4_is5ut"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+radius = 9.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_31j1w"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_13qdw"]
 radius = 6.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_is5ut"]
 radius = 80.305664
 
 [node name="Node2D" type="Node2D" unique_id=1483868119]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1600571795]
 
-[node name="Player" parent="." unique_id=1654438660 instance=ExtResource("2_3i8j8")]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1654438660 node_paths=PackedStringArray("camera")]
+motion_mode = 1
+script = ExtResource("1_lxxgl")
+camera = NodePath("Camera2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=82994196]
+shape = SubResource("CircleShape2D_xrivr")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1308071083]
+scale = Vector2(7.44, 7.44)
+zoom = Vector2(3.685, 3.685)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=491647042]
+sprite_frames = SubResource("SpriteFrames_31j1w")
 
 [node name="Enemy" type="CharacterBody2D" parent="." unique_id=1111966876]
 position = Vector2(89, 0)
@@ -39,7 +57,7 @@ collision_layer = 0
 input_pickable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Area2D" unique_id=1296433334]
-shape = SubResource("CircleShape2D_xrivr")
+shape = SubResource("CircleShape2D_is5ut")
 
 [node name="PatrolRoute" type="Polygon2D" parent="Enemy" unique_id=2040198684]
 color = Color(1, 0, 0, 0.08627451)

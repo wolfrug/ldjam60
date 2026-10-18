@@ -45,6 +45,8 @@ Let's just start looking. We'll make an educated guess once we have something. {
 
 Fine. But you better pull your weight! {S(Deya, Smirk1)}
 
+{ClearPortraits()}
+
 + [Start over]
 ->init
 + {!isPlaying} [Play some music]

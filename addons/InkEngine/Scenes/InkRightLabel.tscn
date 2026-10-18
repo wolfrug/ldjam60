@@ -19,6 +19,8 @@ container = NodePath("Panel")
 z_as_relative = false
 layout_mode = 2
 size_flags_vertical = 3
+offset_transform_enabled = true
+offset_transform_position = Vector2(50, 0)
 theme = SubResource("Theme_8f1fl")
 theme_override_styles/panel = ExtResource("2_wocto")
 

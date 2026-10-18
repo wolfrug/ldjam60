@@ -3,6 +3,10 @@
 LIST characters = Deya, Zayne
 LIST emotions = Angry, Neutral1, Neutral2, Sad, Shock, Smile1, Smile2, Smirk1, Smirk2
 
+===function ClearPortraits()
+#SET_PORTRAIT_LEFT:None
+#SET_PORTRAIT_RIGHT:None
+
 ===function S(char, emotion)
 {char?Deya:
 #SET_PORTRAIT_LEFT:{char}/{emotion}.png^{char} #SET_CUSTOM_LABEL:Left
