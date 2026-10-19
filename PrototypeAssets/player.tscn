@@ -547,7 +547,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qe40t")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"die_down",
 "speed": 5.0
 }, {
@@ -576,7 +576,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_it7ot")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"die_left",
 "speed": 5.0
 }, {
@@ -605,7 +605,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nsfxo")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"die_right",
 "speed": 5.0
 }, {
@@ -634,7 +634,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_l22qm")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"die_up",
 "speed": 5.0
 }, {
@@ -1001,5 +1001,6 @@ scale = Vector2(7.44, 7.44)
 zoom = Vector2(3.685, 3.685)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1643351953]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_31j1w")
-animation = &"die_down"
+animation = &"die_up"

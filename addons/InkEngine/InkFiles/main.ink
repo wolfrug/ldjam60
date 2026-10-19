@@ -46,7 +46,7 @@ The old man gave us a list, but...I dunno what half of these things are. {S(Zayn
 Let me see that. {S(Deya, Angry)}
 
 ->toDoList->
-...well. Shit. OldTek indeed. {S(Deya, Sad)}
+...well. Shit. OldTek indeed. I don't know what these are either. {S(Deya, Sad)}
 
 Let's just start looking. We'll make an educated guess once we have something. {S(Zayne, Smirk2)}
 

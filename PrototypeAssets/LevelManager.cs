@@ -11,6 +11,8 @@ public partial class LevelManager : Node
     [Export] public Array<EnemyNavigationAgent2D> _enemies = new();
     [Export] public Array<Interactable2D> _interactables = new();
     [Export] public Array<Interactable2D> _interactableExits = new();
+
+    public Dictionary<string, int> _cachedPickups = new();
     public override void _Ready()
     {
         base._Ready();
@@ -42,7 +44,7 @@ public partial class LevelManager : Node
             }
         }
         GlobalEvents.SendOnLevelLoaded(new LevelEventArgs { manager = this });
-        GlobalEvents.SendOnPlayAmbience(new InkAudioEventArgs{audioPath = "AmbienceRuin"});
+        GlobalEvents.SendOnPlayAmbience(new InkAudioEventArgs { audioPath = "AmbienceRuin" });
     }
     public override void _EnterTree()
     {
@@ -81,12 +83,24 @@ public partial class LevelManager : Node
                 exit.Active = true;
             }
         }
-        if (args.type == InteractableType.EXIT)
+        if (args.type == InteractableType.PICKUP)
         {
-            GD.Print("Level exit reached!");
-            GlobalEvents.SendOnLevelEnded(new LevelEventArgs { manager = this, interactableTrigger = args.targetNode2d });
-            QueueFree();
+            if (_cachedPickups.TryGetValue(args.ID, out int curvalue))
+            {
+                _cachedPickups[args.ID] = curvalue + args.value;
+            }
+            else
+            {
+                _cachedPickups.Add(args.ID, args.value);
+            }
         }
+        /* if (args.type == InteractableType.EXIT)
+         {
+             GD.Print("Level exit reached!");
+             GlobalEvents.SendOnLevelEnded(new LevelEventArgs { manager = this, interactableTrigger = args.targetNode2d });
+             QueueFree();
+         }
+         */
     }
 
     public void ShowLevel(bool show)

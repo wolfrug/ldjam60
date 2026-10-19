@@ -1,14 +1,50 @@
 [gd_scene format=3 uid="uid://yxlyvuigpksb"]
 
-[ext_resource type="PackedScene" uid="uid://df0lmnfch85lh" path="res://PrototypeAssets/interactable_2d.tscn" id="1_e6ty3"]
+[ext_resource type="Script" uid="uid://buiu6c5o6bgpy" path="res://PrototypeAssets/Interactable2D.cs" id="1_x0n6m"]
+[ext_resource type="Texture2D" uid="uid://c3yp0e8f6wc7h" path="res://PrototypeAssets/Post Apoc Office - Asset Pack/Post Apoc Office - Asset Pack/Post Apoc - Office 32x32 Grid/Office_Walls_32x32.png" id="2_evile"]
+[ext_resource type="Texture2D" uid="uid://cggkqv3t7yjea" path="res://PrototypeAssets/prompt.png" id="3_wthu3"]
+[ext_resource type="Texture2D" uid="uid://cuu3leg2kkxgp" path="res://PrototypeAssets/RetroTechIconPack/RetroTechIconPack/RetroTechIconPack(WhiteOutlines).png" id="4_ul1vy"]
 
-[node name="Exit" unique_id=433796135 instance=ExtResource("1_e6ty3")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6ddw"]
+size = Vector2(59, 75)
+
+[node name="Exit" type="Area2D" unique_id=433796135 node_paths=PackedStringArray("interactPrompt", "interactedWithFlag", "inactiveSprite", "activeSprite")]
+script = ExtResource("1_x0n6m")
 _ID = "continuePlay"
 _type = 3000
+interactPrompt = NodePath("Prompt")
+interactedWithFlag = NodePath("InteractedFlag")
+inactiveSprite = NodePath("ClosedSprite")
+activeSprite = NodePath("Sprite2D")
 
-[node name="Sprite2D" parent="." index="0" unique_id=1405765264]
-scale = Vector2(0.24, 0.24)
-region_rect = Rect2(242.89407, 192.10815, 45.143097, 47.84076)
-
-[node name="InteractedFlag" parent="." index="3" unique_id=1153360675]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1405765264]
 visible = false
+position = Vector2(-2.3841858e-07, -2.3841858e-07)
+texture = ExtResource("2_evile")
+region_enabled = true
+region_rect = Rect2(192.81107, 327.61484, 62.01448, 65.17447)
+
+[node name="ClosedSprite" type="Sprite2D" parent="." unique_id=1651941206]
+position = Vector2(-2.3841858e-07, -2.3841858e-07)
+texture = ExtResource("2_evile")
+region_enabled = true
+region_rect = Rect2(0.74949265, 328.3146, 62.01448, 65.17447)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=401376475]
+position = Vector2(0.5, 5.5)
+shape = SubResource("RectangleShape2D_p6ddw")
+
+[node name="Prompt" type="Sprite2D" parent="." unique_id=1459906725]
+visible = false
+position = Vector2(0.50000024, 0.50000024)
+scale = Vector2(0.359375, 0.359375)
+texture = ExtResource("3_wthu3")
+
+[node name="InteractedFlag" type="Sprite2D" parent="." unique_id=1153360675]
+visible = false
+self_modulate = Color(0, 1, 0, 1)
+position = Vector2(-0.0039057732, -0.06249988)
+scale = Vector2(0.2792515, 0.2526042)
+texture = ExtResource("4_ul1vy")
+region_enabled = true
+region_rect = Rect2(244.02815, 0, 43.971848, 48.286396)

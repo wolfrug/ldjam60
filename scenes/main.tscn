@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://pvn88xjsfue3" path="res://addons/InkEngine/Scenes/InkWriter.tscn" id="1_tbgi4"]
 [ext_resource type="Script" uid="uid://bgtpt7h8135x7" path="res://PrototypeAssets/GameManager.cs" id="1_tipki"]
-[ext_resource type="PackedScene" uid="uid://btrd8tnubc6py" path="res://PrototypeAssets/level_1.tscn" id="2_85g3d"]
+[ext_resource type="PackedScene" uid="uid://btrd8tnubc6py" path="res://scenes/levels/level_1.tscn" id="2_85g3d"]
 [ext_resource type="Resource" uid="uid://ds3ume4yolpfq" path="res://addons/InkEngine/InkFiles/InkStoryData_Main.tres" id="2_tbgi4"]
 [ext_resource type="Script" uid="uid://bmevkp0oxvmmy" path="res://addons/InkEngine/Scripts/Boot.cs" id="3_choun"]
 [ext_resource type="PackedScene" uid="uid://hbv1hij3i6si" path="res://addons/InkEngine/Scenes/InkAudioPlayer.tscn" id="3_tefeu"]

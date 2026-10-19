@@ -5,6 +5,8 @@ LIST emotions = Angry, Neutral1, Neutral2, Sad, Shock, Smile1, Smile2, Smirk1, S
 
 LIST oldTek =  FlipPhone,IPod, Walkman, CDPlayer, Camera, CellPhone, BoomBox, ReelRecorder, VHS, CassetteRecorder, Pager, FaxMachine, Calculator, HDD, CardReader, BarcodeScanner, PaperCutter, CashRegister,FloppyDisk, CD, CRTMonitor, Joystick, Printer, VinylPlayer, Radio,TV,TVRemote,SlideProjector,ArcadeMachine,Clock
 
+VAR pickup = 0
+
 ==toDoList
 #ToDoList^true #clear
 To do:[br][br]#List
@@ -21,6 +23,10 @@ To do:[br][br]#List
 #ToDoList^false
 ->->
 
+===function Pickup(id, amount)
+~pickup+=amount
+We received {id} and {amount}, pickup is now: {pickup}
+~return "Rad"
 
 ===function ClearPortraits()
 #SET_PORTRAIT_LEFT:None

@@ -2,10 +2,11 @@ using Godot;
 using System;
 using Godot.Collections;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 public partial class GameManager : Node
 {
-    [Export] public Dictionary<string, PackedScene> levels = new();
+    [Export] public Godot.Collections.Dictionary<string, PackedScene> levels = new();
     [Export] public string returnFromLevelKnot = "continuePlay";
     [Export] public Node2D storyBackground;
 
@@ -58,11 +59,7 @@ public partial class GameManager : Node
     {
         if (args.type == InteractableType.EXIT)
         {
-            storyBackground.Visible = true;
-            storyBackground.ProcessMode = ProcessModeEnum.Inherit;
-            Inkwriter.instance.Active = true;
-            Inkwriter.instance.Play(args.ID);
-            _currentLoadedLevel = null;
+            HandleEndLevel(args.ID);
         }
         if (args.type == InteractableType.STORY && !Inkwriter.instance.Active)
         {
@@ -97,6 +94,22 @@ public partial class GameManager : Node
             // Player died!
             ResetCurrentLevelWithDelay();
         }
+    }
+    public void HandleEndLevel(string targetknot)
+    {
+        storyBackground.Visible = true;
+        storyBackground.ProcessMode = ProcessModeEnum.Inherit;
+        Inkwriter.instance.Active = true;
+        Inkwriter.instance.Play(targetknot);
+        foreach (KeyValuePair<string, int> kvp in _currentLoadedLevel._cachedPickups)
+        {
+            GlobalEvents.SendOnRequestInkFunction(new InkEventArgs { targetVariable = "Pickup", parameters = new Array<Variant> { kvp.Key, kvp.Value } });
+        }
+        ;
+        GD.Print("Level exit reached!");
+        GlobalEvents.SendOnLevelEnded(new LevelEventArgs { });
+        _currentLoadedLevel.QueueFree();
+        _currentLoadedLevel = null;
     }
     public async void ResetCurrentLevelWithDelay(double delay = 2000)
     {

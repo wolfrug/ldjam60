@@ -1,5 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://dp7p64i6xy7hr"]
 
+[ext_resource type="FontFile" uid="uid://dltv4busrb83q" path="res://fonts/ShadowsIntoLight-Regular.ttf" id="1_onoei"]
 [ext_resource type="StyleBox" uid="uid://cr5tw1cxkmbr6" path="res://addons/InkEngine/UI/default_invisible_label_box.tres" id="1_v73if"]
 [ext_resource type="FontFile" uid="uid://cu4sbc3ni0bsq" path="res://fonts/komika/KOMIKAHB.ttf" id="4_80q75"]
 [ext_resource type="FontFile" uid="uid://dtbp8e7ade64s" path="res://fonts/komika/KOMIKHBI.ttf" id="5_yplx0"]
@@ -9,6 +10,9 @@
 [resource]
 GridContainer/constants/h_separation = 15
 GridContainer/constants/v_separation = 15
+ItemList/colors/font_color = Color(0, 0, 0, 1)
+ItemList/font_sizes/font_size = 21
+ItemList/fonts/font = ExtResource("1_onoei")
 Label/colors/font_shadow_color = Color(0, 0, 0, 0.8392157)
 Label/font_sizes/font_size = 20
 Label/fonts/font = ExtResource("7_yk10p")

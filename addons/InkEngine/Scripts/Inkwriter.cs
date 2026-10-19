@@ -102,6 +102,7 @@ public partial class Inkwriter : CanvasLayer
 		GlobalEvents.OnChoiceSelected += GlobalEvent_OnChoiceSelected;
 		GlobalEvents.OnGotoKnot += GlobalEvent_OnGoToKnot;
 		GlobalEvents.OnRequestSetVariable += GlobalEvent_OnRequestSetVariable;
+		GlobalEvents.OnRequestInkFunction += GlobalEvent_OnRequestInkFunction;
 		base._EnterTree();
 	}
 	public override void _ExitTree()
@@ -109,6 +110,7 @@ public partial class Inkwriter : CanvasLayer
 		GlobalEvents.OnChoiceSelected -= GlobalEvent_OnChoiceSelected;
 		GlobalEvents.OnGotoKnot -= GlobalEvent_OnGoToKnot;
 		GlobalEvents.OnRequestSetVariable -= GlobalEvent_OnRequestSetVariable;
+		GlobalEvents.OnRequestInkFunction -= GlobalEvent_OnRequestInkFunction;
 		base._ExitTree();
 	}
 
@@ -352,6 +354,15 @@ public partial class Inkwriter : CanvasLayer
 	{
 		GD.Print("Ink Writer: Received request to set variable, setting variable " + args.targetVariable + " to " + args.newValue);
 		Story.StoreVariable(args.targetVariable, args.newValue);
+	}
+	private void GlobalEvent_OnRequestInkFunction(InkEventArgs args)
+	{
+		GD.Print("Ink Writer: received request to run an ink function named " + args.targetVariable + " with params " + args.parameters);
+		string textOutput;
+		Variant result;
+		result = Story.EvaluateFunction(args.targetVariable, out textOutput, args.parameters.ToArray());
+		GD.Print("Ink Writer: ran ink function " + args.targetVariable + " with result  " + result + " and text output: " + textOutput);
+		GlobalEvents.SendOnRunInkFunction(new InkEventArgs { inktext = textOutput, newValue = result });
 	}
 
 	public override void _Input(InputEvent @event)

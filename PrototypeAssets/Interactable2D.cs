@@ -16,6 +16,8 @@ public partial class Interactable2D : Area2D
     [Export] public int _value = 1;
     [Export] protected Node2D interactPrompt;
     [Export] protected Node2D interactedWithFlag;
+    [Export] protected Node2D inactiveSprite;
+    [Export] protected Node2D activeSprite;
     [Export] protected bool _active = true;
     private bool readyToInteract = false;
     public override void _Ready()
@@ -82,7 +84,7 @@ public partial class Interactable2D : Area2D
                 if (_type == InteractableType.PICKUP)
                 {
                     Active = false;
-                    GlobalEvents.SendOnPlaySFX(new InkAudioEventArgs{audioPath = "Pickup"});
+                    GlobalEvents.SendOnPlaySFX(new InkAudioEventArgs { audioPath = "Pickup" });
                 }
                 readyToInteract = false; // even if it can be interacted with again, force moving in/out
                 if (interactedWithFlag != null)
@@ -103,14 +105,30 @@ public partial class Interactable2D : Area2D
             if (!value)
             {
                 _active = false;
-                Visible = false;
+                if (_type == InteractableType.EXIT)
+                {
+                    inactiveSprite.Visible = true;
+                    activeSprite.Visible = false;
+                }
+                else
+                {
+                    Visible = false;
+                }
                 ProcessMode = ProcessModeEnum.Disabled;
                 ShowInteractPrompt(false);
             }
             else
             {
                 _active = true;
-                Visible = true;
+                if (_type == InteractableType.EXIT)
+                {
+                    inactiveSprite.Visible = false;
+                    activeSprite.Visible = true;
+                }
+                else
+                {
+                    Visible = true;
+                }
                 ProcessMode = ProcessModeEnum.Inherit;
             }
         }

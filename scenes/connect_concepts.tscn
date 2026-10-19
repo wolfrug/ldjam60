@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://ddrpdojfq277l"]
+
+[ext_resource type="Theme" uid="uid://dp7p64i6xy7hr" path="res://addons/InkEngine/UI/dialogbox_theme.tres" id="1_7gkf7"]
+[ext_resource type="Texture2D" uid="uid://duhmekse7uco" path="res://PrototypeAssets/flixberry_entertainment_old_paper_paper_1_1_800x500.png" id="2_8gpaq"]
+[ext_resource type="Script" uid="uid://dh2lyi07700p2" path="res://scenes/ConnectConcepts.cs" id="2_lylgu"]
+[ext_resource type="Texture2D" uid="uid://17eogimg8a3v" path="res://PrototypeAssets/RetroTechIconPack/RetroTechIconPack/sprites/unknown.png" id="3_x1ipw"]
+[ext_resource type="Texture2D" uid="uid://ckdgou5n8elem" path="res://PrototypeAssets/RetroTechIconPack/RetroTechIconPack/sprites/sprite-1-1.png" id="4_lylgu"]
+[ext_resource type="FontFile" uid="uid://dltv4busrb83q" path="res://fonts/ShadowsIntoLight-Regular.ttf" id="5_7gkf7"]
+[ext_resource type="Texture2D" uid="uid://bp15k5uqnew48" path="res://PrototypeAssets/RetroTechIconPack/RetroTechIconPack/sprites/sprite-1-2.png" id="5_cc5e0"]
+[ext_resource type="Texture2D" uid="uid://caj3xx26frfhw" path="res://PrototypeAssets/RetroTechIconPack/RetroTechIconPack/sprites/same.png" id="7_cc5e0"]
+[ext_resource type="Texture2D" uid="uid://bq8egjrn7bvxb" path="res://PrototypeAssets/RetroTechIconPack/RetroTechIconPack/sprites/not_same.png" id="8_g0s3d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_31j1w"]
+texture = ExtResource("2_8gpaq")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8gpaq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x1ipw"]
+
+[node name="ConnectConcepts" type="Control" unique_id=630961115 node_paths=PackedStringArray("nameList", "iconList", "toggleButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_7gkf7")
+script = ExtResource("2_lylgu")
+nameList = NodePath("Panel/NameList")
+iconList = NodePath("Panel/IconList")
+toggleButton = NodePath("Panel/ConnectButton")
+
+[node name="Panel" type="Panel" parent="." unique_id=1318492060]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 96.0
+offset_right = 889.0
+offset_bottom = 519.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_31j1w")
+
+[node name="NameList" type="ItemList" parent="Panel" unique_id=683173733]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -196.0
+offset_right = 185.0
+offset_bottom = 196.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_8gpaq")
+item_count = 2
+item_0/text = "Flip Phone"
+item_1/text = "Walkman"
+
+[node name="IconList" type="ItemList" parent="Panel" unique_id=1274315591]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -185.0
+offset_top = -196.0
+offset_bottom = 196.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_x1ipw")
+item_count = 2
+item_0/text = "???"
+item_0/icon = ExtResource("4_lylgu")
+item_1/text = "???"
+item_1/icon = ExtResource("5_cc5e0")
+
+[node name="Instructions" type="RichTextLabel" parent="Panel" unique_id=161690457]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.0
+offset_top = 18.0
+offset_right = 87.0
+offset_bottom = 153.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("5_7gkf7")
+text = "Select one item from the left column and one from the right then click \"Connect\" to apply."
+
+[node name="Lore" type="RichTextLabel" parent="Panel" unique_id=453260169]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.5
+offset_top = -135.0
+offset_right = 87.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("5_7gkf7")
+text = "Select one item from the left column and one from the right then click \"Connect\" to apply."
+
+[node name="ConnectButton" type="CheckButton" parent="Panel" unique_id=1275260841]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -73.5
+offset_right = 41.0
+offset_bottom = -39.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.21770078, 0.2177011, 0.21770158, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0.5019608)
+theme_override_fonts/font = ExtResource("5_7gkf7")
+theme_override_icons/checked = ExtResource("7_cc5e0")
+theme_override_icons/unchecked = ExtResource("8_g0s3d")
+theme_override_icons/checked_disabled = ExtResource("3_x1ipw")
+theme_override_icons/unchecked_disabled = ExtResource("3_x1ipw")
+text = "Connect!"
